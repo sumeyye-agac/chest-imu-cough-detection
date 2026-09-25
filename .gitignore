@@ -1,0 +1,93 @@
+# ---------------------------------------------------------------------------
+# Data protection (do not remove)
+#
+# These rules exist to keep pediatric recordings out of the repository. That
+# protection must survive any future change: never delete these rules, only
+# add narrow exceptions below them.
+#
+# Everything under data/ is ignored by default. Use `data/*` (not `data/`) so
+# that git still descends into data/ and the exceptions below can apply.
+#
+# Exceptions (tracked):
+#   - data/sessions/<12 named files>  recordings of one adult subject
+#   - data/legacy_labels/*.json       labels for those adult recordings
+#   - data/.gitkeep, data/README.md
+#
+# The session recordings are listed by exact filename on purpose. A new file
+# dropped into data/sessions/ is NOT tracked by accident; this is deliberate.
+# To publish a new adult recording, add its exact filename below. Never add
+# pediatric (or any third-party) recordings.
+# ---------------------------------------------------------------------------
+data/*
+!data/.gitkeep
+!data/README.md
+
+!data/sessions/
+data/sessions/*
+!data/sessions/baseline_calm_01_sitting.zip
+!data/sessions/baseline_calm_02_standing.zip
+!data/sessions/baseline_confound_01_talking.zip
+!data/sessions/baseline_confound_02_throatclear.zip
+!data/sessions/baseline_movement_01_walking.zip
+!data/sessions/baseline_movement_02_reaching.zip
+!data/sessions/cough_metronomic_01.zip
+!data/sessions/cough_metronomic_02.zip
+!data/sessions/cough_natural_01_sitting.zip
+!data/sessions/cough_natural_02_sitting.zip
+!data/sessions/cough_natural_03_standing.zip
+!data/sessions/cough_natural_04_walking.zip
+
+!data/legacy_labels/
+data/legacy_labels/*
+!data/legacy_labels/*.json
+
+recordings/
+*.csv
+*.wav
+*.edf
+.env
+.DS_Store
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Packaging / build
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+wheels/
+pip-wheel-metadata/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# Type checkers / linters
+.mypy_cache/
+.ruff_cache/
+.pyright/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
