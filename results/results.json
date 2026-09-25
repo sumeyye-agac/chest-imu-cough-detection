@@ -1,0 +1,92 @@
+{
+  "auc": 0.8315524827152735,
+  "auc_ci95": [
+    0.7128564596082908,
+    0.9860641711229946
+  ],
+  "n_bootstrap": 1947,
+  "sensitivity": 0.9069767441860465,
+  "specificity": 0.5135135135135135,
+  "precision": 0.6842105263157895,
+  "confusion": {
+    "tp": 39,
+    "fn": 4,
+    "fp": 18,
+    "tn": 19,
+    "sensitivity": 0.9069767441860465,
+    "specificity": 0.5135135135135135,
+    "precision": 0.6842105263157895
+  },
+  "permutation_null_mean": 0.49941336685522714,
+  "permutation_null_max": 0.7064739157762414,
+  "quiet_background_artifact_auc": 0.5948579594451425,
+  "detection": {
+    "cough_metronomic_01": {
+      "detected": 13,
+      "stated": null
+    },
+    "cough_metronomic_02": {
+      "detected": 13,
+      "stated": null
+    },
+    "cough_natural_01_sitting": {
+      "detected": 9,
+      "stated": null
+    },
+    "cough_natural_02_sitting": {
+      "detected": 8,
+      "stated": 8
+    },
+    "baseline_calm_01_sitting": {
+      "detected": 3,
+      "stated": null
+    },
+    "baseline_confound_01_talking": {
+      "detected": 22,
+      "stated": null
+    },
+    "baseline_confound_02_throatclear": {
+      "detected": 12,
+      "stated": 11
+    }
+  },
+  "per_session": {
+    "cough_metronomic_01": {
+      "n_events": 13,
+      "is_cough_session": true,
+      "fraction_called_cough": 0.8461538461538461
+    },
+    "cough_metronomic_02": {
+      "n_events": 13,
+      "is_cough_session": true,
+      "fraction_called_cough": 0.8461538461538461
+    },
+    "cough_natural_01_sitting": {
+      "n_events": 9,
+      "is_cough_session": true,
+      "fraction_called_cough": 1.0
+    },
+    "cough_natural_02_sitting": {
+      "n_events": 8,
+      "is_cough_session": true,
+      "fraction_called_cough": 1.0
+    },
+    "baseline_calm_01_sitting": {
+      "n_events": 3,
+      "is_cough_session": false,
+      "fraction_called_cough": 0.0
+    },
+    "baseline_confound_01_talking": {
+      "n_events": 22,
+      "is_cough_session": false,
+      "fraction_called_cough": 0.6363636363636364
+    },
+    "baseline_confound_02_throatclear": {
+      "n_events": 12,
+      "is_cough_session": false,
+      "fraction_called_cough": 0.3333333333333333
+    }
+  },
+  "n_events": 80,
+  "n_sessions": 7
+}
