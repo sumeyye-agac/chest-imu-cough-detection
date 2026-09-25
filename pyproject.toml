@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chest-imu-cough"
+version = "0.0.1"
+description = "Cough detection from chest-worn IMU signals without audio."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Sumeyye Agac" }]
+dependencies = [
+    "numpy",
+    "scipy",
+    "pandas",
+    "scikit-learn",
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+torch = ["torch"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
