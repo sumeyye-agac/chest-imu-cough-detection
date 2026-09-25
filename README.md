@@ -27,8 +27,14 @@ cough-vs-confound AUC is 0.832, with a 95% confidence interval of
 | Permutation null | mean 0.499, max 0.706 |
 
 Scope: one subject, seated only, 7 sessions, 80 detected transients. Standing
-and walking sessions are excluded because the labelling method is measurably
-unreliable once the subject moves. See [docs/FINDINGS.md](docs/FINDINGS.md) for the method,
+and walking are excluded for different reasons. Standing: the events are
+detectable, and the count holds at the written-down value over a wide range of
+thresholds, but a higher range than seated, so one global threshold does not
+serve both postures. Walking: no threshold recovers the written-down count. The
+detector keeps one global threshold, because tuning it per posture to match the
+written-down counts is the same fitting the audit is about. Standing could be
+added with a documented per-posture threshold; that choice has not been made.
+See [docs/FINDINGS.md](docs/FINDINGS.md) for the method, the threshold sweep,
 the per-session breakdown and the limits, and
 [docs/LABEL_AUDIT.md](docs/LABEL_AUDIT.md) for the audit.
 

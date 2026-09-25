@@ -19,12 +19,35 @@ are taken from is recorded in `results/results.json`.
 | `baseline_confound_01_talking` | confound: talking and laughing |
 | `baseline_confound_02_throatclear` | confound: throat clearing |
 
-The standing and walking sessions are excluded. The exclusion is a result, not
-a convenience: check 7 of the [label audit](LABEL_AUDIT.md) shows that the
-detector reproduces the counts written down during recording while seated
-(8 written / 8 detected; 11 / 12) but not while standing (8 / 13) or walking
-(9 / 28). The labelling method is measurably unreliable once the subject moves,
-so those sessions cannot be labelled with it.
+The standing and walking sessions are excluded, for different reasons.
+
+At the default threshold (8 MAD), check 7 of the [label audit](LABEL_AUDIT.md)
+shows the detector reproducing the counts written down during recording while
+seated (8 written / 8 detected; 11 / 12) but not while standing (8 / 13) or
+walking (9 / 28). A sweep over the detector threshold
+(`scripts/detector_sensitivity.py`, output in `results/detector_sensitivity.json`)
+separates the two cases:
+
+| session (written down) | count across thresholds 6 to 25 MAD |
+|---|---|
+| `cough_natural_02_sitting` (8) | exactly 8 from threshold 8 to 25 |
+| `baseline_confound_02_throatclear` (11) | within one of 11 over a run of 10 thresholds (7 to 16) |
+| `cough_natural_03_standing` (8) | exactly 8 from threshold 11 to 25 |
+| `cough_natural_04_walking` (9) | falls from 44 to 0; equals 9 only at threshold 10 |
+
+- **Standing:** the events are there. The count holds at 8 over a wide range
+  of thresholds, but that range starts higher than the seated one. One global
+  threshold does not serve both postures.
+- **Walking:** no threshold recovers the written-down count. The count passes
+  9 at a single threshold on its way down. That is a crossing, not a property
+  of the recording.
+
+The detector keeps one global threshold. Tuning it per posture to match the
+written-down counts is the same fitting the label audit is about.
+
+Standing could be brought in with a documented per-posture threshold. That is a
+choice not yet made, not an oversight. Walking cannot be brought in with this
+detector.
 
 ## Method
 
