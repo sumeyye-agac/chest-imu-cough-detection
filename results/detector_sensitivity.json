@@ -1,0 +1,222 @@
+{
+  "defaults": {
+    "band_hz": [
+      10.0,
+      80.0
+    ],
+    "threshold_mad": 8.0,
+    "refractory_s": 1.0
+  },
+  "threshold_sweep": {
+    "thresholds": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "sessions": {
+      "cough_natural_02_sitting": {
+        "written_down": 8,
+        "counts": [
+          9,
+          9,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "stable_run": 20
+      },
+      "cough_natural_03_standing": {
+        "written_down": 8,
+        "counts": [
+          14,
+          13,
+          13,
+          11,
+          9,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "stable_run": 16
+      },
+      "cough_natural_04_walking": {
+        "written_down": 9,
+        "counts": [
+          44,
+          37,
+          28,
+          18,
+          9,
+          6,
+          4,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "stable_run": 1
+      },
+      "baseline_confound_02_throatclear": {
+        "written_down": 11,
+        "counts": [
+          13,
+          12,
+          12,
+          11,
+          11,
+          11,
+          11,
+          11,
+          11,
+          10,
+          10,
+          9,
+          7,
+          7,
+          7,
+          7,
+          6,
+          6,
+          6,
+          6
+        ],
+        "stable_run": 10
+      }
+    }
+  },
+  "band_sweep": {
+    "5-80": {
+      "cough_natural_02_sitting": 12,
+      "cough_natural_03_standing": 13,
+      "cough_natural_04_walking": 0,
+      "baseline_confound_02_throatclear": 15
+    },
+    "8-80": {
+      "cough_natural_02_sitting": 10,
+      "cough_natural_03_standing": 14,
+      "cough_natural_04_walking": 23,
+      "baseline_confound_02_throatclear": 13
+    },
+    "10-60": {
+      "cough_natural_02_sitting": 8,
+      "cough_natural_03_standing": 13,
+      "cough_natural_04_walking": 27,
+      "baseline_confound_02_throatclear": 12
+    },
+    "10-80": {
+      "cough_natural_02_sitting": 8,
+      "cough_natural_03_standing": 13,
+      "cough_natural_04_walking": 28,
+      "baseline_confound_02_throatclear": 12
+    },
+    "10-100": {
+      "cough_natural_02_sitting": 8,
+      "cough_natural_03_standing": 13,
+      "cough_natural_04_walking": 29,
+      "baseline_confound_02_throatclear": 12
+    },
+    "15-80": {
+      "cough_natural_02_sitting": 8,
+      "cough_natural_03_standing": 13,
+      "cough_natural_04_walking": 28,
+      "baseline_confound_02_throatclear": 11
+    },
+    "20-80": {
+      "cough_natural_02_sitting": 8,
+      "cough_natural_03_standing": 12,
+      "cough_natural_04_walking": 28,
+      "baseline_confound_02_throatclear": 10
+    }
+  },
+  "refractory_sweep": {
+    "0.5": {
+      "cough_natural_02_sitting": 13,
+      "cough_natural_03_standing": 15,
+      "cough_natural_04_walking": 31,
+      "baseline_confound_02_throatclear": 14
+    },
+    "0.75": {
+      "cough_natural_02_sitting": 12,
+      "cough_natural_03_standing": 13,
+      "cough_natural_04_walking": 28,
+      "baseline_confound_02_throatclear": 13
+    },
+    "1.0": {
+      "cough_natural_02_sitting": 8,
+      "cough_natural_03_standing": 13,
+      "cough_natural_04_walking": 28,
+      "baseline_confound_02_throatclear": 12
+    },
+    "1.25": {
+      "cough_natural_02_sitting": 8,
+      "cough_natural_03_standing": 11,
+      "cough_natural_04_walking": 27,
+      "baseline_confound_02_throatclear": 12
+    },
+    "1.5": {
+      "cough_natural_02_sitting": 8,
+      "cough_natural_03_standing": 11,
+      "cough_natural_04_walking": 22,
+      "baseline_confound_02_throatclear": 12
+    },
+    "2.0": {
+      "cough_natural_02_sitting": 8,
+      "cough_natural_03_standing": 10,
+      "cough_natural_04_walking": 21,
+      "baseline_confound_02_throatclear": 12
+    }
+  }
+}
