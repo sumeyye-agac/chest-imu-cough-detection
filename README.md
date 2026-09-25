@@ -2,11 +2,12 @@
 
 Cough detection from a chest-worn inertial measurement unit (IMU), without audio.
 
-On one adult subject, seated, coughs are detected reliably but are not
-separated from talking and laughing: 64% of transients in the talking/laughing
-session are classified as coughs. Across seven seated sessions the
-cough-vs-confound AUC is 0.832, with a 95% confidence interval of
-[0.713, 0.986] (sensitivity 0.907, specificity 0.514).
+The first labelling pass took its cough labels from peaks in the same
+accelerometer signal it then classified. An audit of that pass found merged
+labels placed where nothing happened, the real events next to them left
+negative, and about half of the positive labels at baseline noise. This
+repository holds the recordings, that audit, and what the seated data still
+shows once those problems are measured.
 
 ## What this repository contains
 
