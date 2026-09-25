@@ -1,0 +1,113 @@
+{
+  "cough_metronomic_01": {
+    "zip": "analysis/data/raw/cough_metronomic_01.zip",
+    "raw_candidate_count": 9,
+    "merged_pairs": [
+      [
+        1789553821.378,
+        1789553822.507
+      ]
+    ],
+    "confirmed_event_count": 8,
+    "confirmed_events_t_unix": [
+      1789553758.888,
+      1789553779.969,
+      1789553798.038,
+      1789553810.461,
+      1789553821.943,
+      1789553833.424,
+      1789553840.576,
+      1789553851.116
+    ]
+  },
+  "cough_metronomic_02": {
+    "zip": "analysis/data/raw/cough_metronomic_02.zip",
+    "raw_candidate_count": 9,
+    "merged_pairs": [
+      [
+        1789554121.155,
+        1789554122.661
+      ]
+    ],
+    "confirmed_event_count": 8,
+    "confirmed_events_t_unix": [
+      1789554043.228,
+      1789554064.309,
+      1789554072.216,
+      1789554083.886,
+      1789554112.497,
+      1789554121.908,
+      1789554131.696,
+      1789554142.238
+    ]
+  },
+  "cough_natural_01_sitting": {
+    "zip": "analysis/data/raw/cough_natural_01_sitting.zip",
+    "raw_candidate_count": 9,
+    "merged_pairs": [],
+    "confirmed_event_count": 9,
+    "confirmed_events_t_unix": [
+      1789554199.416,
+      1789554209.581,
+      1789554220.498,
+      1789554244.968,
+      1789554250.615,
+      1789554252.121,
+      1789554273.58,
+      1789554298.427,
+      1789554311.227
+    ]
+  },
+  "cough_natural_02_sitting": {
+    "zip": "analysis/data/raw/cough_natural_02_sitting.zip",
+    "raw_candidate_count": 12,
+    "merged_pairs": [
+      [
+        1789554477.331,
+        1789554478.461
+      ],
+      [
+        1789554496.908,
+        1789554498.79
+      ],
+      [
+        1789554522.132,
+        1789554524.015
+      ],
+      [
+        1789554528.908,
+        1789554530.414
+      ]
+    ],
+    "confirmed_event_count": 8,
+    "confirmed_events_t_unix": [
+      1789554427.638,
+      1789554456.625,
+      1789554477.896,
+      1789554497.849,
+      1789554523.074,
+      1789554529.661,
+      1789554531.543,
+      1789554545.85
+    ],
+    "note": "cluster D (528.908, 530.414, 531.543): 528.908+530.414 merge (continuous burst, no baseline return between them, 36-79x std deviation throughout); 531.543 kept separate - signal returns to within <3x baseline std for multiple stretches between it and the merged pair, unlike the other three clusters."
+  },
+  "cough_natural_03_standing": {
+    "zip": "analysis/data/raw/cough_natural_03_standing.zip",
+    "raw_candidate_count": 10,
+    "merged_pairs": [],
+    "confirmed_event_count": 10,
+    "confirmed_events_t_unix": [
+      1789555550.699,
+      1789555578.56,
+      1789555580.065,
+      1789555585.711,
+      1789555602.277,
+      1789555603.783,
+      1789555630.137,
+      1789555631.643,
+      1789555648.96,
+      1789555656.867
+    ]
+  }
+}
