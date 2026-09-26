@@ -3,7 +3,9 @@
 The published EPFL numbers come from `scripts/run_epfl.py`, recorded in
 `results/epfl_results.json`. The threshold-placement measurements and the
 annotation-based reference come from `scripts/threshold_placement.py`, recorded
-in `results/threshold_placement.json`. Neither script changes the detector. The dataset and its layout are described in
+in `results/threshold_placement.json`. The checks on those results come from
+`scripts/reference_checks.py`, recorded in `results/reference_checks.json`.
+None of these scripts changes the detector. The dataset and its layout are described in
 [EPFL_DATASET.md](EPFL_DATASET.md).
 
 ## Scope
@@ -164,8 +166,45 @@ sit lower because the label audit found half of them placed at baseline noise.
 What this means for a fixed threshold of 8: on the single subject's recordings
 every cough clears it by a factor of about ten. On the EPFL recordings the
 median cough sits just below it, and 53% of coughs do not reach it even with
-the baseline on the true background. The same threshold that has a wide margin on one device has
-none on the other.
+the baseline on the true background. The same threshold that has a wide
+margin on one device has none on the other.
+
+### Weaker coughs or a noisier background?
+
+The heights above are ratios of cough to each device's own background. A ratio
+cannot say which side differs.
+
+**Absolute units: not available.** If the EPFL accelerometer carried gravity,
+its magnitude at rest would be a constant that fixes the scale. The rule, set
+before looking: accept it as gravity if every per-subject median lies within
+15% of the median across subjects. Median magnitude outside annotated coughs,
+seated, per subject: 94.7 to 136.3 counts, median 110.2, largest deviation 24%.
+Within one subject, recordings range as widely as 76.9 to 126.4. The rule
+fails, so no scale is assumed and the comparison in m/s^2 is not made. The
+Movesense reads 9.78 m/s^2 at rest.
+
+**A yardstick that needs no calibration: walking.** Both datasets contain
+walking. The ratio of cough peak to the median envelope during walking, both on
+a 10-45 Hz envelope, is free of any constant scale factor:
+
+| | cough peak / walking envelope |
+|---|---|
+| single subject (seated cough sessions; walking session) | 6.8 (6.6 for `cough_natural_02_sitting` alone) |
+| EPFL, walking from mov_walk cough recordings outside annotated coughs | per-subject median 2.7, quartiles 1.8 to 4.3, range 1.3 to 7.8 |
+| EPFL, walking from mov_walk deep-breathing recordings | per-subject median 4.6, quartiles 2.8 to 6.9, range 1.7 to 9.4 |
+
+Against walking, the single subject's coughs are about 1.5 to 2.5 times larger
+than the EPFL coughs, and inside the EPFL per-subject range. Against the seated
+background they are about 12 times larger. A difference of 1.5 to 2.5 in cough
+size cannot account for a factor of 12, so most of the gap sits on the
+background side: the EPFL seated background is higher, relative to its own
+walking and coughs, than the single subject's.
+
+What this supports and what it does not: walking intensity differs between
+people and between an indoor loop and the EPFL protocol, so this is an
+order-of-magnitude check, not a measurement. It supports "not coughs ten times
+weaker". It does not identify the cause of the higher background: sensor noise,
+mounting, sampling rate, or what the subjects did between coughs.
 
 ## Cough vs. confound
 
@@ -280,6 +319,53 @@ Two diagnostics with 1 s windows (in `results/threshold_placement.json`) give
 AUC 0.920 with the published fallback kept for 213 events, and 0.923 with those
 events dropped, on 84 cough transients.
 
+### Symmetric reference: is 0.874 separation or asymmetry?
+
+The three columns above go 0.765, 0.874, 0.904 as the cough reference gets
+cleaner relative to the confound reference. That is what it would look like if
+the asymmetry were doing the work. So the reference was rebuilt the same way
+for both classes, with no annotations: run the published detector at a low
+threshold (3 MAD, 0.25 s refractory) over every recording, treat each peak as a
+candidate event, and take the reference from 0.5 s windows more than 0.5 s from
+any candidate.
+
+| | published | annotation reference | symmetric reference |
+|---|---|---|---|
+| transients (cough / confound) | 900 (205 / 695) | 820 (204 / 616) | 846 (177 / 669) |
+| AUC | 0.765 | 0.874 | 0.719 |
+| 95% CI (subject-level bootstrap) | [0.719, 0.803] | [0.803, 0.924] | [0.665, 0.777] |
+| AUC, cough vs. laugh / throat clearing / breathing | 0.708 / 0.707 / 0.884 | 0.872 / 0.856 / 0.892 | 0.683 / 0.646 / 0.835 |
+| permutation null, mean / max | 0.491 / 0.545 | 0.484 / 0.551 | 0.493 / 0.557 |
+| quiet-background check | 0.802 | 0.662 | 0.750 |
+| events dropped, no reference window (cough / confound) | none; 163 use the absolute-energy fallback | 80 in total | 28 / 26 |
+
+The symmetric rule fails its own check on the class where it can be checked.
+In cough recordings, 475 of its 693 reference windows (69%) overlap an
+annotated cough. Its reference band energies differ from the annotation-based
+ones by a median factor of 2.5 to 2.8 in the bands below 25 Hz (median
+|log10 ratio| 0.44, 0.42 and 0.39 for 1-3, 3-10 and 10-25 Hz; 0.16 for
+25-50 Hz; 151 recordings with both). The background check moves away from 0.5,
+not toward it.
+
+A lower candidate threshold makes the windows cleaner but leaves most
+recordings without one:
+
+| candidate threshold (MAD) | cough-recording windows overlapping a cough | cough recordings without a window | confound recordings without a window |
+|---|---|---|---|
+| 1.0 | 20 of 92 (22%) | 99 of 168 | 219 of 503 |
+| 1.5 | 73 of 171 (43%) | 75 of 168 | 108 of 503 |
+| 2.0 | 175 of 307 (57%) | 42 of 168 | 50 of 503 |
+| 3.0 | 475 of 693 (69%) | 9 of 168 | 13 of 503 |
+
+No setting gives a reference that is both clean and available for most
+recordings. The check is inconclusive: the reference choice moves the AUC from
+0.719 to 0.874, and no reference tested here is both symmetric and clean.
+
+The reported EPFL figure stays the published 0.765 [0.719, 0.803]. It was fixed
+before these checks, uses no annotations, and lies between the two
+alternatives. The 0.874 remains visible as what an asymmetric reference gives,
+the 0.719 as what a symmetric but contaminated reference gives.
+
 ## One subject against fifteen
 
 | | single subject, seated ([FINDINGS.md](FINDINGS.md)) | EPFL, 15 subjects, seated |
@@ -287,16 +373,20 @@ events dropped, on 84 cough transients.
 | unit of independence | session (7) | subject (15) |
 | transients (cough / confound) | 80 (43 / 37) | 900 (205 / 695), matched; 820 with the annotation reference |
 | AUC, published reference | 0.832 [0.713, 0.986] | 0.765 [0.719, 0.803] |
-| AUC, annotation reference | not applicable | 0.874 [0.803, 0.924], upper estimate |
+| AUC, annotation reference | not applicable | 0.874 [0.803, 0.924], asymmetric reference |
+| AUC, symmetric reference | not applicable | 0.719 [0.665, 0.777], contaminated reference |
 | least separated confound | talking and laughing (64% called cough) | laugh (0.708) and throat clearing (0.707); with the annotation reference throat clearing (0.856) and laugh (0.872) |
 | most separated confound | quiet sitting (0% called cough) | deep breathing (0.884; 0.892) |
-| quiet-background check | 0.595 | 0.802, not interpretable; 0.662 with the annotation reference |
+| quiet-background check | 0.595 | 0.802, not interpretable; 0.662 with the annotation reference; 0.750 with the symmetric reference |
 | detection vs. independent count | 8 / 8 and 11 / 12 against written-down counts | recall 0.098 against audio labels; 0.270 with the threshold on the true background |
 | cough peak height, background MADs | median 87.6 (98.6 in the session with all coughs written down) | median 7.5 |
+| cough peak / walking envelope | 6.8 | per-subject median 2.7 (4.6 with deep-breathing walking) |
 
 With the published reference, the single-subject AUC of 0.832 is above the
 EPFL interval and inside the range of EPFL per-subject AUCs (0.590 to 0.914).
-With the annotation reference, the EPFL interval [0.803, 0.924] contains 0.832.
+With the annotation reference the EPFL interval [0.803, 0.924] contains 0.832;
+with the symmetric reference [0.665, 0.777] does not. Which reference is right
+is not settled (see above).
 The EPFL interval is narrower because it rests on 15 subjects instead of 7
 sessions. In both datasets laughing and throat clearing are the hardest
 confounds to separate from coughing, and quiet breathing or sitting the
@@ -306,7 +396,9 @@ The detection results come from different recordings, not a contradiction.
 On the single subject's device a cough rises a median 88 background MADs above
 the background, and the count matches what was written down. On the EPFL
 device it rises a median 7.5, and the recordings are about half coughing,
-which also lifts the threshold 1.74x above the true background.
+which also lifts the threshold 1.74x above the true background. Measured
+against walking, the coughs differ by a factor of about 1.5 to 2.5, not 12, so
+most of that gap comes from a higher EPFL background.
 
 ## Limits
 
@@ -328,4 +420,9 @@ which also lifts the threshold 1.74x above the true background.
   [DETECTOR.md](DETECTOR.md)), so the published detector is kept.
 - The annotation-based reference exists only for cough recordings. Confound
   recordings keep a detection-based reference, and the background check (0.662)
-  shows the two still differ.
+  shows the two still differ. A symmetric reference built without annotations
+  is contaminated by coughs in 69% of its cough-recording windows. The
+  reference question is open, and the AUC moves from 0.719 to 0.874 with it.
+- The EPFL accelerometer has no stable gravity level, so its units are
+  unknown. The cough-size comparison rests on walking as a yardstick, which is
+  an order-of-magnitude check.

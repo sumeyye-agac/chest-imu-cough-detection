@@ -154,10 +154,14 @@ threshold 8 MAD, refractory 1.0 s):
   0.956.
 - Coughs on the EPFL device peak a median 7.5 background MADs above the
   background. On the recordings here they peak a median 88. About half of the
-  EPFL coughs never reach a threshold of 8.
-- Cough against confound: AUC 0.765, 95% CI [0.719, 0.803], leave-one-subject-out;
-  0.874 [0.803, 0.924], an upper estimate, with a feature reference level taken
-  from the annotations.
+  EPFL coughs never reach a threshold of 8. Against walking, the coughs differ
+  by a factor of about 1.5 to 2.5, so most of that gap is a higher EPFL
+  background (an order-of-magnitude check; the EPFL units cannot be
+  calibrated).
+- Cough against confound: AUC 0.765, 95% CI [0.719, 0.803], leave-one-subject-out.
+  The feature reference moves it from 0.719 (same rule for both classes,
+  contaminated by coughs) to 0.874 (cough-free reference for cough recordings
+  only). Neither reference is clean; 0.765 is the reported figure.
   Laughing and throat clearing are the least separated from coughing (AUC 0.708
   and 0.707), deep breathing the most (0.884).
 

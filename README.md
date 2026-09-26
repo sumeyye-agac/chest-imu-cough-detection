@@ -23,15 +23,22 @@ so they can go where a microphone cannot.
   measured the port more than the method: the EPFL recordings are about half
   coughing, which lifts the detector's self-set threshold 1.74 times above the
   true background. With the threshold placed on the background outside the
-  annotations, recall is 0.270 at precision 0.956. That is still low. Coughs on
-  that device rise a median 7.5 background MADs above the background, against
-  a median 88 on the recordings in this repository, and about half of them
-  never reach a threshold of 8.
+  annotations, recall is 0.270 at precision 0.956. That is still low: about
+  half of the EPFL coughs never reach a threshold of 8. Coughs there rise a
+  median 7.5 MADs above that device's own background, against 88 on the
+  recordings in this repository. That ratio does not say which side differs,
+  and the EPFL units cannot be calibrated. Measured against walking, which
+  needs no calibration, the coughs differ by a factor of about 1.5 to 2.5, so
+  most of the gap is a higher background on the EPFL recordings, not coughs
+  ten times weaker. Walking differs between people, so this is an
+  order-of-magnitude check.
 - **Across the 15 EPFL subjects, cough vs. confound gives AUC 0.765**, 95% CI
-  [0.719, 0.803], with the published feature reference, and 0.874 [0.803,
-  0.924] with a reference level taken from the annotations. The second figure
-  is an upper estimate: the reference still differs between the classes.
-  Laughing and throat clearing stay the confounds closest to coughing.
+  [0.719, 0.803], with the published feature reference. How the feature
+  reference is built moves this number: 0.874 [0.803, 0.924] with a cough-free
+  reference for cough recordings only, 0.719 [0.665, 0.777] with the same rule
+  for both classes. Neither alternative reference is clean, so that check is
+  inconclusive and 0.765 stays the reported figure. Laughing and throat
+  clearing stay the confounds closest to coughing.
 
 ## Limits
 
@@ -60,6 +67,7 @@ Requires Python 3.10 or later.
     python scripts/fetch_epfl.py
     python scripts/run_epfl.py              # results/epfl_results.json, about 4 minutes
     python scripts/threshold_placement.py   # results/threshold_placement.json, about 3 minutes
+    python scripts/reference_checks.py      # results/reference_checks.json, about 2 minutes
 
 The last digit of some values may differ across scikit-learn versions.
 
@@ -173,16 +181,20 @@ Per-subject AUCs rest on 3 to 45 cough transients each.
 | | single subject | EPFL |
 |---|---|---|
 | AUC, 95% CI, published reference | 0.832 [0.713, 0.986], 7 sessions | 0.765 [0.719, 0.803], 15 subjects |
-| AUC, 95% CI, annotation reference | not applicable | 0.874 [0.803, 0.924], upper estimate |
+| AUC, 95% CI, annotation reference | not applicable | 0.874 [0.803, 0.924], asymmetric reference |
+| AUC, 95% CI, symmetric reference | not applicable | 0.719 [0.665, 0.777], contaminated reference |
 | least separated confound | talking and laughing | laugh and throat clearing |
 | permutation null, mean | 0.499 | 0.491; 0.484 with the annotation reference |
-| quiet-background check | 0.595 | 0.802; 0.662 with the annotation reference |
+| quiet-background check | 0.595 | 0.802; 0.662 annotation reference; 0.750 symmetric reference |
 | cough peak, background MADs | median 87.6 | median 7.5 |
+| cough peak / walking envelope | 6.8 | per-subject median 2.7 |
 
 With the published reference the EPFL background check is not interpretable:
 95% of its "quiet" windows in cough recordings overlap an annotated cough. The
 annotation reference brings it to 0.662, not 0.5, because confound recordings
-have no annotations and keep a detection-based reference.
+have no annotations and keep a detection-based reference. A symmetric
+reference built without annotations gives 0.750, and 69% of its windows in
+cough recordings overlap a cough.
 
 Details: [docs/CROSS_DATASET.md](docs/CROSS_DATASET.md),
 [docs/EPFL_DATASET.md](docs/EPFL_DATASET.md).
