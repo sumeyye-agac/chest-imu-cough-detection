@@ -1,0 +1,1237 @@
+{
+  "peak_height": {
+    "single_subject_detected": {
+      "pooled": {
+        "n": 43,
+        "min": 13.10182353954054,
+        "q1": 75.69019583875095,
+        "median": 87.55301323433494,
+        "q3": 95.92661101352962,
+        "max": 185.78745606229248,
+        "mean": 86.79330372427269,
+        "share_above_8": 1.0,
+        "share_above_5": 1.0,
+        "share_above_3": 1.0
+      },
+      "per_session": {
+        "cough_metronomic_01": {
+          "n": 13,
+          "min": 15.538969966610246,
+          "q1": 59.77337648144097,
+          "median": 74.88911633839362,
+          "q3": 80.1331956506727,
+          "max": 98.11615675758574,
+          "mean": 66.62810555526293,
+          "share_above_8": 1.0,
+          "share_above_5": 1.0,
+          "share_above_3": 1.0
+        },
+        "cough_metronomic_02": {
+          "n": 13,
+          "min": 13.10182353954054,
+          "q1": 79.04567119288072,
+          "median": 89.07665542319674,
+          "q3": 96.09596087721546,
+          "max": 123.74405114794983,
+          "mean": 85.05915572181537,
+          "share_above_8": 1.0,
+          "share_above_5": 1.0,
+          "share_above_3": 1.0
+        },
+        "cough_natural_01_sitting": {
+          "n": 9,
+          "min": 67.79181492914748,
+          "q1": 86.80775600636784,
+          "median": 89.95355522264306,
+          "q3": 92.44803992036431,
+          "max": 126.97805492409817,
+          "mean": 94.42013140485801,
+          "share_above_8": 1.0,
+          "share_above_5": 1.0,
+          "share_above_3": 1.0
+        },
+        "cough_natural_02_sitting": {
+          "n": 8,
+          "min": 79.32991808662534,
+          "q1": 89.43947261862922,
+          "median": 98.59451890532952,
+          "q3": 134.65170530309643,
+          "max": 185.78745606229248,
+          "mean": 113.7995601122482,
+          "share_above_8": 1.0,
+          "share_above_5": 1.0,
+          "share_above_3": 1.0
+        }
+      }
+    },
+    "single_subject_detected_band_10_45": {
+      "pooled": {
+        "n": 43,
+        "min": 12.309953222652261,
+        "q1": 69.92956910355998,
+        "median": 78.07865194500931,
+        "q3": 87.35708938495848,
+        "max": 169.7602061579714,
+        "mean": 79.66163610733457,
+        "share_above_8": 1.0,
+        "share_above_5": 1.0,
+        "share_above_3": 1.0
+      },
+      "per_session": {
+        "cough_metronomic_01": {
+          "n": 13,
+          "min": 14.820434342092305,
+          "q1": 56.743489014856564,
+          "median": 70.0017595915793,
+          "q3": 74.56705880815002,
+          "max": 93.39240876934053,
+          "mean": 62.46556063383162,
+          "share_above_8": 1.0,
+          "share_above_5": 1.0,
+          "share_above_3": 1.0
+        },
+        "cough_metronomic_02": {
+          "n": 13,
+          "min": 12.309953222652261,
+          "q1": 69.85737861554067,
+          "median": 84.34173609063389,
+          "q3": 89.93012601538736,
+          "max": 116.51625037297794,
+          "mean": 79.79031361481631,
+          "share_above_8": 1.0,
+          "share_above_5": 1.0,
+          "share_above_3": 1.0
+        },
+        "cough_natural_01_sitting": {
+          "n": 9,
+          "min": 57.44251172558567,
+          "q1": 76.69105330595221,
+          "median": 78.53180316148232,
+          "q3": 84.935566713982,
+          "max": 113.82763905873848,
+          "mean": 84.08053635023725,
+          "share_above_8": 1.0,
+          "share_above_5": 1.0,
+          "share_above_3": 1.0
+        },
+        "cough_natural_02_sitting": {
+          "n": 8,
+          "min": 71.99041950620679,
+          "q1": 79.59138397735762,
+          "median": 86.70649965857162,
+          "q3": 121.05499170441519,
+          "max": 169.7602061579714,
+          "mean": 102.42489502885351,
+          "share_above_8": 1.0,
+          "share_above_5": 1.0,
+          "share_above_3": 1.0
+        }
+      }
+    },
+    "single_subject_legacy_confirmed": {
+      "pooled": {
+        "n": 33,
+        "min": 1.5109627406460364,
+        "q1": 7.465837675034115,
+        "median": 43.98246669057094,
+        "q3": 73.15588009708739,
+        "max": 125.55410891974233,
+        "mean": 45.08226680506179,
+        "share_above_8": 0.7272727272727273,
+        "share_above_5": 0.8787878787878788,
+        "share_above_3": 0.9696969696969697
+      },
+      "per_session": {
+        "cough_metronomic_01": {
+          "n": 8,
+          "min": 6.289932684032598,
+          "q1": 39.417442922593565,
+          "median": 56.95792846814414,
+          "q3": 70.37657642257768,
+          "max": 85.07827567216441,
+          "mean": 52.1993656954016,
+          "share_above_8": 0.875,
+          "share_above_5": 1.0,
+          "share_above_3": 1.0
+        },
+        "cough_metronomic_02": {
+          "n": 8,
+          "min": 1.5109627406460364,
+          "q1": 5.109602098426811,
+          "median": 8.244516863615493,
+          "q3": 66.81896305586322,
+          "max": 82.45721749729701,
+          "mean": 31.491471128837297,
+          "share_above_8": 0.5,
+          "share_above_5": 0.75,
+          "share_above_3": 0.875
+        },
+        "cough_natural_01_sitting": {
+          "n": 9,
+          "min": 3.995986971652218,
+          "q1": 6.947904931620166,
+          "median": 67.0091391539503,
+          "q3": 88.93076173971893,
+          "max": 125.55410891974233,
+          "mean": 60.09940921042809,
+          "share_above_8": 0.6666666666666666,
+          "share_above_5": 0.7777777777777778,
+          "share_above_3": 1.0
+        },
+        "cough_natural_02_sitting": {
+          "n": 8,
+          "min": 7.465837675034115,
+          "q1": 14.941844232414878,
+          "median": 24.951276297812548,
+          "q3": 45.224020980430225,
+          "max": 98.6186117374089,
+          "mean": 34.661678384909415,
+          "share_above_8": 0.875,
+          "share_above_5": 1.0,
+          "share_above_3": 1.0
+        }
+      }
+    },
+    "epfl_annotated": {
+      "pooled": {
+        "n": 2094,
+        "min": -1.1575794195951707,
+        "q1": 4.212588019146808,
+        "median": 7.471916886061156,
+        "q3": 12.688155762448508,
+        "max": 64.62301684617366,
+        "mean": 9.583930807175113,
+        "share_above_8": 0.4665711556829035,
+        "share_above_5": 0.6852913085004776,
+        "share_above_3": 0.8409742120343839
+      },
+      "per_subject": {
+        "14287": {
+          "n": 123,
+          "min": 0.0435405798926988,
+          "q1": 2.670444881696245,
+          "median": 4.222098082272492,
+          "q3": 6.214632244432597,
+          "max": 27.583569156393043,
+          "mean": 5.706745352975449,
+          "share_above_8": 0.1951219512195122,
+          "share_above_5": 0.4146341463414634,
+          "share_above_3": 0.6747967479674797
+        },
+        "14342": {
+          "n": 113,
+          "min": 0.9241535358822568,
+          "q1": 3.9145927281155406,
+          "median": 6.459803575947365,
+          "q3": 9.1352837778785,
+          "max": 22.860023768759447,
+          "mean": 7.035434123957693,
+          "share_above_8": 0.3274336283185841,
+          "share_above_5": 0.6283185840707964,
+          "share_above_3": 0.8584070796460177
+        },
+        "14547": {
+          "n": 150,
+          "min": 0.09686194856958648,
+          "q1": 2.200598699361164,
+          "median": 3.635282050096867,
+          "q3": 5.986327007068969,
+          "max": 19.386837838863983,
+          "mean": 4.432834674711252,
+          "share_above_8": 0.08666666666666667,
+          "share_above_5": 0.4,
+          "share_above_3": 0.5733333333333334
+        },
+        "20794": {
+          "n": 72,
+          "min": 2.416503714030326,
+          "q1": 6.846888612502186,
+          "median": 10.63327625785011,
+          "q3": 14.164549952939703,
+          "max": 23.08965818959009,
+          "mean": 11.089893379722518,
+          "share_above_8": 0.6666666666666666,
+          "share_above_5": 0.8472222222222222,
+          "share_above_3": 0.9861111111111112
+        },
+        "38936": {
+          "n": 172,
+          "min": -0.03339928105228113,
+          "q1": 2.929285978919979,
+          "median": 4.42397786505548,
+          "q3": 6.671722371406254,
+          "max": 19.580692202684478,
+          "mean": 5.464336928338381,
+          "share_above_8": 0.19767441860465115,
+          "share_above_5": 0.43023255813953487,
+          "share_above_3": 0.7441860465116279
+        },
+        "47779": {
+          "n": 155,
+          "min": 0.747598567863932,
+          "q1": 4.672248797472281,
+          "median": 6.118579411840805,
+          "q3": 8.253717457711744,
+          "max": 17.909868823469708,
+          "mean": 6.791960997652375,
+          "share_above_8": 0.2709677419354839,
+          "share_above_5": 0.6967741935483871,
+          "share_above_3": 0.9032258064516129
+        },
+        "49661": {
+          "n": 120,
+          "min": 3.25170412391865,
+          "q1": 12.105848555219659,
+          "median": 18.97794224243297,
+          "q3": 27.653120138757604,
+          "max": 64.62301684617366,
+          "mean": 21.90068413157663,
+          "share_above_8": 0.9166666666666666,
+          "share_above_5": 0.9833333333333333,
+          "share_above_3": 1.0
+        },
+        "55502": {
+          "n": 184,
+          "min": -1.1575794195951707,
+          "q1": 0.9014612224845179,
+          "median": 2.8069832357762152,
+          "q3": 5.41274271075523,
+          "max": 15.983074671395016,
+          "mean": 3.6835371619089208,
+          "share_above_8": 0.14130434782608695,
+          "share_above_5": 0.30434782608695654,
+          "share_above_3": 0.4782608695652174
+        },
+        "74768": {
+          "n": 148,
+          "min": 0.9474569822171177,
+          "q1": 4.483966188041603,
+          "median": 6.920331074874612,
+          "q3": 10.081689569984317,
+          "max": 22.488971948073043,
+          "mean": 7.606907437716439,
+          "share_above_8": 0.36486486486486486,
+          "share_above_5": 0.6891891891891891,
+          "share_above_3": 0.9256756756756757
+        },
+        "76918": {
+          "n": 162,
+          "min": 0.04830012456502127,
+          "q1": 6.685559961345473,
+          "median": 10.15266278268023,
+          "q3": 16.437978478845807,
+          "max": 42.96393521887147,
+          "mean": 11.858248657473878,
+          "share_above_8": 0.6666666666666666,
+          "share_above_5": 0.8024691358024691,
+          "share_above_3": 0.9135802469135802
+        },
+        "84479": {
+          "n": 141,
+          "min": 2.0788034323937614,
+          "q1": 7.299507888754553,
+          "median": 10.213534652598106,
+          "q3": 15.448681141302485,
+          "max": 28.190939879762013,
+          "mean": 11.420427101586819,
+          "share_above_8": 0.6879432624113475,
+          "share_above_5": 0.900709219858156,
+          "share_above_3": 0.9574468085106383
+        },
+        "86463": {
+          "n": 131,
+          "min": 0.05393803932616045,
+          "q1": 4.853261047012247,
+          "median": 7.297084824622472,
+          "q3": 11.438413522639145,
+          "max": 44.722061660758065,
+          "mean": 9.476959282563348,
+          "share_above_8": 0.42748091603053434,
+          "share_above_5": 0.732824427480916,
+          "share_above_3": 0.8931297709923665
+        },
+        "87369": {
+          "n": 122,
+          "min": 1.5841555275614996,
+          "q1": 10.079363318062228,
+          "median": 15.140424598633487,
+          "q3": 19.16445829854625,
+          "max": 40.60874583591852,
+          "mean": 15.233651038856149,
+          "share_above_8": 0.860655737704918,
+          "share_above_5": 0.9508196721311475,
+          "share_above_3": 0.9918032786885246
+        },
+        "87447": {
+          "n": 145,
+          "min": 1.5847756119169172,
+          "q1": 6.55973588049136,
+          "median": 10.150973288861904,
+          "q3": 17.582321828508764,
+          "max": 54.0884413094312,
+          "mean": 13.111894373062643,
+          "share_above_8": 0.6137931034482759,
+          "share_above_5": 0.8275862068965517,
+          "share_above_3": 0.9448275862068966
+        },
+        "97706": {
+          "n": 156,
+          "min": 0.7173520506346623,
+          "q1": 9.634864554997808,
+          "median": 12.493083848509517,
+          "q3": 16.365257484440995,
+          "max": 40.862233506779845,
+          "mean": 13.792284807032985,
+          "share_above_8": 0.8589743589743589,
+          "share_above_5": 0.9294871794871795,
+          "share_above_3": 0.9807692307692307
+        }
+      },
+      "recordings_skipped_no_background": 0,
+      "per_subject_median_spread": {
+        "min": 2.8069832357762152,
+        "q1": 5.271278638448143,
+        "median": 7.297084824622472,
+        "q3": 10.423405455224108,
+        "max": 18.97794224243297,
+        "mean": 8.643069186136842
+      }
+    }
+  },
+  "baseline_ratios": {
+    "median_ratio": {
+      "min": 0.8520622972109101,
+      "q1": 1.3214780342781032,
+      "median": 1.474705153848144,
+      "q3": 1.735227529052584,
+      "max": 3.441223782698792,
+      "mean": 1.5459924757471426
+    },
+    "mad_ratio": {
+      "min": 0.5276922708589924,
+      "q1": 1.3965168022866998,
+      "median": 1.8214428944366654,
+      "q3": 2.24114532266496,
+      "max": 6.7373662926550875,
+      "mean": 1.917209821897481
+    },
+    "threshold_ratio": {
+      "min": 0.5839760785345093,
+      "q1": 1.3858137395464811,
+      "median": 1.7435553009484583,
+      "q3": 2.114539175422334,
+      "max": 5.918308604566991,
+      "mean": 1.8261180581112613
+    }
+  },
+  "detection_bound": {
+    "per_subject": {
+      "14287": {
+        "annotated": 123,
+        "hit": 18,
+        "detections": 35,
+        "recall": 0.14634146341463414,
+        "precision": 0.5142857142857142
+      },
+      "14342": {
+        "annotated": 113,
+        "hit": 20,
+        "detections": 20,
+        "recall": 0.17699115044247787,
+        "precision": 1.0
+      },
+      "14547": {
+        "annotated": 150,
+        "hit": 12,
+        "detections": 13,
+        "recall": 0.08,
+        "precision": 0.9230769230769231
+      },
+      "20794": {
+        "annotated": 72,
+        "hit": 27,
+        "detections": 29,
+        "recall": 0.375,
+        "precision": 0.9310344827586207
+      },
+      "38936": {
+        "annotated": 172,
+        "hit": 22,
+        "detections": 22,
+        "recall": 0.12790697674418605,
+        "precision": 1.0
+      },
+      "47779": {
+        "annotated": 155,
+        "hit": 31,
+        "detections": 32,
+        "recall": 0.2,
+        "precision": 0.96875
+      },
+      "49661": {
+        "annotated": 120,
+        "hit": 70,
+        "detections": 70,
+        "recall": 0.5833333333333334,
+        "precision": 1.0
+      },
+      "55502": {
+        "annotated": 184,
+        "hit": 20,
+        "detections": 20,
+        "recall": 0.10869565217391304,
+        "precision": 1.0
+      },
+      "74768": {
+        "annotated": 148,
+        "hit": 39,
+        "detections": 40,
+        "recall": 0.2635135135135135,
+        "precision": 0.975
+      },
+      "76918": {
+        "annotated": 162,
+        "hit": 54,
+        "detections": 54,
+        "recall": 0.3333333333333333,
+        "precision": 1.0
+      },
+      "84479": {
+        "annotated": 141,
+        "hit": 53,
+        "detections": 53,
+        "recall": 0.375886524822695,
+        "precision": 1.0
+      },
+      "86463": {
+        "annotated": 131,
+        "hit": 37,
+        "detections": 38,
+        "recall": 0.2824427480916031,
+        "precision": 0.9736842105263158
+      },
+      "87369": {
+        "annotated": 122,
+        "hit": 53,
+        "detections": 54,
+        "recall": 0.4344262295081967,
+        "precision": 0.9814814814814815
+      },
+      "87447": {
+        "annotated": 145,
+        "hit": 51,
+        "detections": 53,
+        "recall": 0.35172413793103446,
+        "precision": 0.9622641509433962
+      },
+      "97706": {
+        "annotated": 156,
+        "hit": 59,
+        "detections": 59,
+        "recall": 0.3782051282051282,
+        "precision": 1.0
+      }
+    },
+    "pooled": {
+      "annotated": 2094,
+      "hit": 566,
+      "detections": 592,
+      "recall": 0.2702960840496657,
+      "precision": 0.956081081081081
+    }
+  },
+  "classification": {
+    "primary_0.5s_dropped": {
+      "n_events": 820,
+      "n_cough_events": 204,
+      "n_confound_events": 616,
+      "n_subjects": 15,
+      "auc": 0.8735676088617265,
+      "auc_ci95": [
+        0.8030833780062143,
+        0.9244292731440474
+      ],
+      "n_bootstrap": 2000,
+      "sensitivity": 0.45588235294117646,
+      "specificity": 0.9383116883116883,
+      "precision": 0.7099236641221374,
+      "confusion": {
+        "tp": 93,
+        "fn": 111,
+        "fp": 38,
+        "tn": 578,
+        "sensitivity": 0.45588235294117646,
+        "specificity": 0.9383116883116883,
+        "precision": 0.7099236641221374
+      },
+      "permutation_null_mean": 0.4835658316356846,
+      "permutation_null_max": 0.5511443213649097,
+      "n_permutation_rounds": 30,
+      "per_class": {
+        "cough": {
+          "n_events": 204,
+          "fraction_called_cough": 0.45588235294117646
+        },
+        "laugh": {
+          "n_events": 187,
+          "fraction_called_cough": 0.06951871657754011
+        },
+        "throat_clearing": {
+          "n_events": 214,
+          "fraction_called_cough": 0.07476635514018691
+        },
+        "deep_breathing": {
+          "n_events": 215,
+          "fraction_called_cough": 0.04186046511627907
+        }
+      },
+      "auc_cough_vs_each_confound": {
+        "laugh": 0.8718150361748978,
+        "throat_clearing": 0.8561938794209273,
+        "deep_breathing": 0.8923848609211125
+      },
+      "per_subject": {
+        "14287": {
+          "n_cough_events": 7,
+          "n_confound_events": 76,
+          "cough_called_cough": 0.5714285714285714,
+          "confound_called_cough": 0.13157894736842105,
+          "auc": 0.8796992481203008
+        },
+        "14342": {
+          "n_cough_events": 6,
+          "n_confound_events": 24,
+          "cough_called_cough": 0.3333333333333333,
+          "confound_called_cough": 0.0,
+          "auc": 0.9722222222222222
+        },
+        "14547": {
+          "n_cough_events": 6,
+          "n_confound_events": 54,
+          "cough_called_cough": 0.5,
+          "confound_called_cough": 0.037037037037037035,
+          "auc": 0.9043209876543209
+        },
+        "20794": {
+          "n_cough_events": 12,
+          "n_confound_events": 45,
+          "cough_called_cough": 0.3333333333333333,
+          "confound_called_cough": 0.24444444444444444,
+          "auc": 0.6777777777777777
+        },
+        "38936": {
+          "n_cough_events": 4,
+          "n_confound_events": 49,
+          "cough_called_cough": 0.5,
+          "confound_called_cough": 0.02040816326530612,
+          "auc": 0.9081632653061225
+        },
+        "47779": {
+          "n_cough_events": 0,
+          "n_confound_events": 54,
+          "cough_called_cough": null,
+          "confound_called_cough": 0.0,
+          "auc": null
+        },
+        "49661": {
+          "n_cough_events": 45,
+          "n_confound_events": 37,
+          "cough_called_cough": 0.7555555555555555,
+          "confound_called_cough": 0.1891891891891892,
+          "auc": 0.8714714714714715
+        },
+        "55502": {
+          "n_cough_events": 13,
+          "n_confound_events": 28,
+          "cough_called_cough": 0.0,
+          "confound_called_cough": 0.0,
+          "auc": 0.6593406593406593
+        },
+        "74768": {
+          "n_cough_events": 8,
+          "n_confound_events": 35,
+          "cough_called_cough": 0.125,
+          "confound_called_cough": 0.05714285714285714,
+          "auc": 0.825
+        },
+        "76918": {
+          "n_cough_events": 10,
+          "n_confound_events": 60,
+          "cough_called_cough": 0.1,
+          "confound_called_cough": 0.05,
+          "auc": 0.7633333333333333
+        },
+        "84479": {
+          "n_cough_events": 11,
+          "n_confound_events": 34,
+          "cough_called_cough": 0.18181818181818182,
+          "confound_called_cough": 0.0,
+          "auc": 0.9866310160427807
+        },
+        "86463": {
+          "n_cough_events": 15,
+          "n_confound_events": 29,
+          "cough_called_cough": 0.4666666666666667,
+          "confound_called_cough": 0.0,
+          "auc": 0.9862068965517241
+        },
+        "87369": {
+          "n_cough_events": 33,
+          "n_confound_events": 29,
+          "cough_called_cough": 0.6363636363636364,
+          "confound_called_cough": 0.06896551724137931,
+          "auc": 0.9111807732497388
+        },
+        "87447": {
+          "n_cough_events": 31,
+          "n_confound_events": 27,
+          "cough_called_cough": 0.3548387096774194,
+          "confound_called_cough": 0.0,
+          "auc": 0.9366786140979689
+        },
+        "97706": {
+          "n_cough_events": 3,
+          "n_confound_events": 35,
+          "cough_called_cough": 0.3333333333333333,
+          "confound_called_cough": 0.0,
+          "auc": 0.9047619047619049
+        }
+      },
+      "per_subject_auc_spread": {
+        "min": 0.6593406593406593,
+        "q1": 0.8366178678678678,
+        "median": 0.9045414462081129,
+        "q3": 0.9303041538859114,
+        "max": 0.9866310160427807,
+        "mean": 0.8704848692807375
+      },
+      "events_without_reference_window": 80,
+      "events_without_reference_window_dropped": true,
+      "reference_window_s": 0.5,
+      "quiet_background_artifact_auc": 0.6622545685279189,
+      "reference_windows": {
+        "cough": 625,
+        "confound": 6304
+      }
+    },
+    "literal_0.5s_dropped": {
+      "n_events": 899,
+      "n_cough_events": 204,
+      "n_confound_events": 695,
+      "n_subjects": 15,
+      "auc": 0.9037875581887431,
+      "auc_ci95": [
+        0.8482725618953098,
+        0.9488510918593746
+      ],
+      "n_bootstrap": 2000,
+      "sensitivity": 0.4852941176470588,
+      "specificity": 0.935251798561151,
+      "precision": 0.6875,
+      "confusion": {
+        "tp": 99,
+        "fn": 105,
+        "fp": 45,
+        "tn": 650,
+        "sensitivity": 0.4852941176470588,
+        "specificity": 0.935251798561151,
+        "precision": 0.6875
+      },
+      "permutation_null_mean": 0.49366142380213485,
+      "permutation_null_max": 0.5693539286218084,
+      "n_permutation_rounds": 30,
+      "per_class": {
+        "cough": {
+          "n_events": 204,
+          "fraction_called_cough": 0.4852941176470588
+        },
+        "laugh": {
+          "n_events": 191,
+          "fraction_called_cough": 0.010471204188481676
+        },
+        "throat_clearing": {
+          "n_events": 278,
+          "fraction_called_cough": 0.09712230215827339
+        },
+        "deep_breathing": {
+          "n_events": 226,
+          "fraction_called_cough": 0.07079646017699115
+        }
+      },
+      "auc_cough_vs_each_confound": {
+        "laugh": 0.949517503336413,
+        "throat_clearing": 0.8789321483989279,
+        "deep_breathing": 0.8957140378275203
+      },
+      "per_subject": {
+        "14287": {
+          "n_cough_events": 7,
+          "n_confound_events": 98,
+          "cough_called_cough": 0.42857142857142855,
+          "confound_called_cough": 0.10204081632653061,
+          "auc": 0.8833819241982508
+        },
+        "14342": {
+          "n_cough_events": 6,
+          "n_confound_events": 27,
+          "cough_called_cough": 0.3333333333333333,
+          "confound_called_cough": 0.0,
+          "auc": 1.0
+        },
+        "14547": {
+          "n_cough_events": 6,
+          "n_confound_events": 54,
+          "cough_called_cough": 0.5,
+          "confound_called_cough": 0.0,
+          "auc": 0.9537037037037037
+        },
+        "20794": {
+          "n_cough_events": 12,
+          "n_confound_events": 45,
+          "cough_called_cough": 0.3333333333333333,
+          "confound_called_cough": 0.26666666666666666,
+          "auc": 0.7314814814814814
+        },
+        "38936": {
+          "n_cough_events": 4,
+          "n_confound_events": 64,
+          "cough_called_cough": 0.5,
+          "confound_called_cough": 0.03125,
+          "auc": 0.96484375
+        },
+        "47779": {
+          "n_cough_events": 0,
+          "n_confound_events": 54,
+          "cough_called_cough": null,
+          "confound_called_cough": 0.0,
+          "auc": null
+        },
+        "49661": {
+          "n_cough_events": 45,
+          "n_confound_events": 65,
+          "cough_called_cough": 0.7777777777777778,
+          "confound_called_cough": 0.2153846153846154,
+          "auc": 0.9237606837606837
+        },
+        "55502": {
+          "n_cough_events": 13,
+          "n_confound_events": 28,
+          "cough_called_cough": 0.0,
+          "confound_called_cough": 0.0,
+          "auc": 0.7417582417582418
+        },
+        "74768": {
+          "n_cough_events": 8,
+          "n_confound_events": 35,
+          "cough_called_cough": 0.25,
+          "confound_called_cough": 0.05714285714285714,
+          "auc": 0.8535714285714286
+        },
+        "76918": {
+          "n_cough_events": 10,
+          "n_confound_events": 60,
+          "cough_called_cough": 0.3,
+          "confound_called_cough": 0.08333333333333333,
+          "auc": 0.7883333333333333
+        },
+        "84479": {
+          "n_cough_events": 11,
+          "n_confound_events": 34,
+          "cough_called_cough": 0.18181818181818182,
+          "confound_called_cough": 0.0,
+          "auc": 0.9866310160427807
+        },
+        "86463": {
+          "n_cough_events": 15,
+          "n_confound_events": 33,
+          "cough_called_cough": 0.6,
+          "confound_called_cough": 0.0,
+          "auc": 0.9878787878787879
+        },
+        "87369": {
+          "n_cough_events": 33,
+          "n_confound_events": 29,
+          "cough_called_cough": 0.6060606060606061,
+          "confound_called_cough": 0.0,
+          "auc": 0.9822361546499477
+        },
+        "87447": {
+          "n_cough_events": 31,
+          "n_confound_events": 31,
+          "cough_called_cough": 0.3870967741935484,
+          "confound_called_cough": 0.0,
+          "auc": 0.9573361082206036
+        },
+        "97706": {
+          "n_cough_events": 3,
+          "n_confound_events": 38,
+          "cough_called_cough": 0.6666666666666666,
+          "confound_called_cough": 0.0,
+          "auc": 0.9912280701754386
+        }
+      },
+      "per_subject_auc_spread": {
+        "min": 0.7314814814814814,
+        "q1": 0.8610240524781342,
+        "median": 0.9555199059621536,
+        "q3": 0.9855323006945724,
+        "max": 1.0,
+        "mean": 0.9104389059839059
+      },
+      "events_without_reference_window": 1,
+      "events_without_reference_window_dropped": true,
+      "reference_window_s": 0.5,
+      "quiet_background_artifact_auc": 0.6621871428571429,
+      "reference_windows": {
+        "cough": 625,
+        "confound": 10080
+      }
+    },
+    "diagnostic_1s_fallback_kept": {
+      "n_events": 900,
+      "n_cough_events": 205,
+      "n_confound_events": 695,
+      "n_subjects": 15,
+      "auc": 0.9198245306194068,
+      "auc_ci95": [
+        0.8764697050493003,
+        0.9558046870243748
+      ],
+      "n_bootstrap": 2000,
+      "sensitivity": 0.5804878048780487,
+      "specificity": 0.9424460431654677,
+      "precision": 0.7484276729559748,
+      "confusion": {
+        "tp": 119,
+        "fn": 86,
+        "fp": 40,
+        "tn": 655,
+        "sensitivity": 0.5804878048780487,
+        "specificity": 0.9424460431654677,
+        "precision": 0.7484276729559748
+      },
+      "permutation_null_mean": 0.4971625431362227,
+      "permutation_null_max": 0.5581751184418319,
+      "n_permutation_rounds": 30,
+      "per_class": {
+        "cough": {
+          "n_events": 205,
+          "fraction_called_cough": 0.5804878048780487
+        },
+        "laugh": {
+          "n_events": 191,
+          "fraction_called_cough": 0.05235602094240838
+        },
+        "throat_clearing": {
+          "n_events": 278,
+          "fraction_called_cough": 0.07913669064748201
+        },
+        "deep_breathing": {
+          "n_events": 226,
+          "fraction_called_cough": 0.035398230088495575
+        }
+      },
+      "auc_cough_vs_each_confound": {
+        "laugh": 0.9267526497254502,
+        "throat_clearing": 0.9000701877522372,
+        "deep_breathing": 0.938268940211526
+      },
+      "per_subject": {
+        "14287": {
+          "n_cough_events": 7,
+          "n_confound_events": 98,
+          "cough_called_cough": 0.42857142857142855,
+          "confound_called_cough": 0.08163265306122448,
+          "auc": 0.7201166180758017
+        },
+        "14342": {
+          "n_cough_events": 6,
+          "n_confound_events": 27,
+          "cough_called_cough": 0.8333333333333334,
+          "confound_called_cough": 0.0,
+          "auc": 1.0
+        },
+        "14547": {
+          "n_cough_events": 7,
+          "n_confound_events": 54,
+          "cough_called_cough": 1.0,
+          "confound_called_cough": 0.0,
+          "auc": 1.0
+        },
+        "20794": {
+          "n_cough_events": 12,
+          "n_confound_events": 45,
+          "cough_called_cough": 0.08333333333333333,
+          "confound_called_cough": 0.13333333333333333,
+          "auc": 0.674074074074074
+        },
+        "38936": {
+          "n_cough_events": 4,
+          "n_confound_events": 64,
+          "cough_called_cough": 0.75,
+          "confound_called_cough": 0.078125,
+          "auc": 0.9453125
+        },
+        "47779": {
+          "n_cough_events": 0,
+          "n_confound_events": 54,
+          "cough_called_cough": null,
+          "confound_called_cough": 0.0,
+          "auc": null
+        },
+        "49661": {
+          "n_cough_events": 45,
+          "n_confound_events": 65,
+          "cough_called_cough": 0.7111111111111111,
+          "confound_called_cough": 0.2,
+          "auc": 0.8311111111111111
+        },
+        "55502": {
+          "n_cough_events": 13,
+          "n_confound_events": 28,
+          "cough_called_cough": 1.0,
+          "confound_called_cough": 0.0,
+          "auc": 1.0
+        },
+        "74768": {
+          "n_cough_events": 8,
+          "n_confound_events": 35,
+          "cough_called_cough": 0.25,
+          "confound_called_cough": 0.0,
+          "auc": 0.9321428571428572
+        },
+        "76918": {
+          "n_cough_events": 10,
+          "n_confound_events": 60,
+          "cough_called_cough": 0.5,
+          "confound_called_cough": 0.03333333333333333,
+          "auc": 0.9483333333333334
+        },
+        "84479": {
+          "n_cough_events": 11,
+          "n_confound_events": 34,
+          "cough_called_cough": 0.36363636363636365,
+          "confound_called_cough": 0.0,
+          "auc": 0.9652406417112299
+        },
+        "86463": {
+          "n_cough_events": 15,
+          "n_confound_events": 33,
+          "cough_called_cough": 0.6666666666666666,
+          "confound_called_cough": 0.030303030303030304,
+          "auc": 0.9818181818181818
+        },
+        "87369": {
+          "n_cough_events": 33,
+          "n_confound_events": 29,
+          "cough_called_cough": 0.3939393939393939,
+          "confound_called_cough": 0.06896551724137931,
+          "auc": 0.8871473354231976
+        },
+        "87447": {
+          "n_cough_events": 31,
+          "n_confound_events": 31,
+          "cough_called_cough": 0.6451612903225806,
+          "confound_called_cough": 0.03225806451612903,
+          "auc": 0.9313215400624351
+        },
+        "97706": {
+          "n_cough_events": 3,
+          "n_confound_events": 38,
+          "cough_called_cough": 0.3333333333333333,
+          "confound_called_cough": 0.05263157894736842,
+          "auc": 0.6578947368421053
+        }
+      },
+      "per_subject_auc_spread": {
+        "min": 0.6578947368421053,
+        "q1": 0.8451201671891327,
+        "median": 0.9387276785714286,
+        "q3": 0.9776737967914438,
+        "max": 1.0,
+        "mean": 0.8910366378281661
+      },
+      "events_without_reference_window": 213,
+      "events_without_reference_window_dropped": false,
+      "reference_window_s": 1.0,
+      "quiet_background_artifact_auc": 0.5567847640386501,
+      "reference_windows": {
+        "cough": 74,
+        "confound": 3088
+      }
+    },
+    "diagnostic_1s_dropped": {
+      "n_events": 687,
+      "n_cough_events": 84,
+      "n_confound_events": 603,
+      "n_subjects": 15,
+      "auc": 0.9225499486693516,
+      "auc_ci95": [
+        0.8369324848841977,
+        0.9678443242210951
+      ],
+      "n_bootstrap": 2000,
+      "sensitivity": 0.30952380952380953,
+      "specificity": 0.9850746268656716,
+      "precision": 0.7428571428571429,
+      "confusion": {
+        "tp": 26,
+        "fn": 58,
+        "fp": 9,
+        "tn": 594,
+        "sensitivity": 0.30952380952380953,
+        "specificity": 0.9850746268656716,
+        "precision": 0.7428571428571429
+      },
+      "permutation_null_mean": 0.4854092632077707,
+      "permutation_null_max": 0.5918028903103529,
+      "n_permutation_rounds": 30,
+      "per_class": {
+        "cough": {
+          "n_events": 84,
+          "fraction_called_cough": 0.30952380952380953
+        },
+        "laugh": {
+          "n_events": 172,
+          "fraction_called_cough": 0.0
+        },
+        "throat_clearing": {
+          "n_events": 218,
+          "fraction_called_cough": 0.0045871559633027525
+        },
+        "deep_breathing": {
+          "n_events": 213,
+          "fraction_called_cough": 0.03755868544600939
+        }
+      },
+      "auc_cough_vs_each_confound": {
+        "laugh": 0.9469130675526024,
+        "throat_clearing": 0.9322848405417213,
+        "deep_breathing": 0.8929130337581043
+      },
+      "per_subject": {
+        "14287": {
+          "n_cough_events": 4,
+          "n_confound_events": 75,
+          "cough_called_cough": 0.0,
+          "confound_called_cough": 0.013333333333333334,
+          "auc": 0.6366666666666667
+        },
+        "14342": {
+          "n_cough_events": 0,
+          "n_confound_events": 24,
+          "cough_called_cough": null,
+          "confound_called_cough": 0.0,
+          "auc": null
+        },
+        "14547": {
+          "n_cough_events": 0,
+          "n_confound_events": 54,
+          "cough_called_cough": null,
+          "confound_called_cough": 0.0,
+          "auc": null
+        },
+        "20794": {
+          "n_cough_events": 8,
+          "n_confound_events": 42,
+          "cough_called_cough": 0.0,
+          "confound_called_cough": 0.14285714285714285,
+          "auc": 0.6785714285714286
+        },
+        "38936": {
+          "n_cough_events": 1,
+          "n_confound_events": 53,
+          "cough_called_cough": 0.0,
+          "confound_called_cough": 0.0,
+          "auc": 1.0
+        },
+        "47779": {
+          "n_cough_events": 0,
+          "n_confound_events": 50,
+          "cough_called_cough": null,
+          "confound_called_cough": 0.0,
+          "auc": null
+        },
+        "49661": {
+          "n_cough_events": 26,
+          "n_confound_events": 35,
+          "cough_called_cough": 0.6153846153846154,
+          "confound_called_cough": 0.0,
+          "auc": 0.9813186813186813
+        },
+        "55502": {
+          "n_cough_events": 0,
+          "n_confound_events": 28,
+          "cough_called_cough": null,
+          "confound_called_cough": 0.0,
+          "auc": null
+        },
+        "74768": {
+          "n_cough_events": 3,
+          "n_confound_events": 35,
+          "cough_called_cough": 0.0,
+          "confound_called_cough": 0.0,
+          "auc": 0.8666666666666667
+        },
+        "76918": {
+          "n_cough_events": 3,
+          "n_confound_events": 60,
+          "cough_called_cough": 0.6666666666666666,
+          "confound_called_cough": 0.03333333333333333,
+          "auc": 0.9722222222222222
+        },
+        "84479": {
+          "n_cough_events": 3,
+          "n_confound_events": 34,
+          "cough_called_cough": 0.0,
+          "confound_called_cough": 0.0,
+          "auc": 0.9117647058823529
+        },
+        "86463": {
+          "n_cough_events": 6,
+          "n_confound_events": 29,
+          "cough_called_cough": 0.5,
+          "confound_called_cough": 0.0,
+          "auc": 1.0
+        },
+        "87369": {
+          "n_cough_events": 18,
+          "n_confound_events": 25,
+          "cough_called_cough": 0.16666666666666666,
+          "confound_called_cough": 0.0,
+          "auc": 0.991111111111111
+        },
+        "87447": {
+          "n_cough_events": 10,
+          "n_confound_events": 27,
+          "cough_called_cough": 0.2,
+          "confound_called_cough": 0.0,
+          "auc": 0.9481481481481481
+        },
+        "97706": {
+          "n_cough_events": 2,
+          "n_confound_events": 32,
+          "cough_called_cough": 0.0,
+          "confound_called_cough": 0.0,
+          "auc": 0.578125
+        }
+      },
+      "per_subject_auc_spread": {
+        "min": 0.578125,
+        "q1": 0.7726190476190476,
+        "median": 0.9481481481481481,
+        "q3": 0.9862148962148962,
+        "max": 1.0,
+        "mean": 0.8695086027806617
+      },
+      "events_without_reference_window": 213,
+      "events_without_reference_window_dropped": true,
+      "reference_window_s": 1.0,
+      "quiet_background_artifact_auc": 0.5567847640386501,
+      "reference_windows": {
+        "cough": 74,
+        "confound": 3088
+      }
+    }
+  }
+}
