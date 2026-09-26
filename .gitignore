@@ -41,6 +41,10 @@ data/sessions/*
 data/legacy_labels/*
 !data/legacy_labels/*.json
 
+# Third-party datasets (EPFL cough dataset, fetched by scripts/fetch_epfl.py).
+# Redistributable under their own licences, but not ours to re-host.
+data/external/
+
 recordings/
 *.csv
 *.wav
