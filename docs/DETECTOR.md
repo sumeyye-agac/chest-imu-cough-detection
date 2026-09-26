@@ -48,3 +48,44 @@ to 2.0 s. Below 1.0 s the count rises (12 at 0.75 s, 13 at 0.5 s).
 
 The standing and walking results of the same sweep, and what they mean for
 which sessions are analysed, are in [FINDINGS.md](FINDINGS.md).
+
+## Operating assumption
+
+The threshold is set from the recording's own background: the baseline is the
+median of the envelope, the scale is its MAD, and a peak must clear baseline +
+8 MAD. That assumes events occupy a small share of the recording, so that the
+median and the MAD describe the background and not the events.
+
+On the recordings in this repository the assumption holds well enough that the
+detected counts match the written-down counts. On the EPFL cough recordings it
+does not: annotated coughs cover a median 46% of each recording. There the
+median is 1.47x and the MAD 1.82x what they are on the samples outside the
+coughs, and the threshold sits 1.74x too high. Recall against the audio
+annotations is 0.098 as published and 0.270 with the baseline and MAD taken
+from outside the annotations, at the same threshold of 8. See
+[CROSS_DATASET.md](CROSS_DATASET.md).
+
+### Why the estimator was not replaced
+
+An estimator that survives dense events is not a free swap. Four were tried on
+a trial version of `detect.py`, not kept in the repository: iterative
+rejection of samples above 3, 5 and 8 MAD, and a scale taken from the samples
+below the median. Each one changed the detected event times at threshold 8 in 8
+to 11 of the 12 single-subject sessions.
+
+The closest to the annotation-based result was iterative rejection at 3 MAD:
+EPFL recall 0.274 at precision 0.933. On the single subject it gave 98
+transients instead of 80, AUC 0.810 instead of 0.832, 7 of 8 audit checks (the
+throat-clearing count became 13 against 11 written down), and 70 detections in
+the walking session instead of 28.
+
+The reason is that the single subject's recordings are not sparse in the sense
+that matters here. In the seated cough, talking and throat-clearing sessions
+4% to 10% of the envelope samples lie above the threshold, against a median
+0.5% in the EPFL cough recordings. The EPFL contamination sits in the body of
+the distribution, not in its upper tail: coughs peak at a median 7.5
+background MADs. A rule that corrects the EPFL baseline moves the
+single-subject baseline too.
+
+The published estimator stays. Its counts were validated against counts
+written down during recording.

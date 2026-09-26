@@ -148,8 +148,16 @@ threshold 8 MAD, refractory 1.0 s):
 - 205 of the 214 detections hit an annotated cough.
 - The detection count does not hold over a range of thresholds, as it did on
   the seated recordings here. In the EPFL recordings coughs cover about half of
-  each recording, and the MAD threshold assumes transients are rare.
-- Cough against confound: AUC 0.765, 95% CI [0.719, 0.803], leave-one-subject-out.
+  each recording, and the MAD threshold assumes transients are rare: it lands
+  1.74x above the true background. With the baseline and MAD taken from outside
+  the annotations, at the same threshold of 8, recall is 0.270 at precision
+  0.956.
+- Coughs on the EPFL device peak a median 7.5 background MADs above the
+  background. On the recordings here they peak a median 88. About half of the
+  EPFL coughs never reach a threshold of 8.
+- Cough against confound: AUC 0.765, 95% CI [0.719, 0.803], leave-one-subject-out;
+  0.874 [0.803, 0.924], an upper estimate, with a feature reference level taken
+  from the annotations.
   Laughing and throat clearing are the least separated from coughing (AUC 0.708
   and 0.707), deep breathing the most (0.884).
 
