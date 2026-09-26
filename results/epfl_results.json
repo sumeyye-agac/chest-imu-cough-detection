@@ -1,0 +1,882 @@
+{
+  "scope": {
+    "movement": "sit",
+    "n_recordings": 671,
+    "n_cough_recordings": 168,
+    "n_confound_recordings": 503,
+    "n_subjects": 15,
+    "n_subjects_with_cough_and_confound": 15,
+    "n_annotated_coughs": 2094,
+    "sample_rate_hz": 100.0,
+    "hit_tolerance_s": 0.2
+  },
+  "detector": {
+    "band_hz": [
+      10.0,
+      45.0
+    ],
+    "threshold_mad": 8.0,
+    "refractory_s": 1.0
+  },
+  "threshold_sweep": [
+    {
+      "threshold": 3,
+      "annotated": 2094,
+      "hit": 706,
+      "detections": 749,
+      "unmatched": 43,
+      "unmatched_inside_cough": 0,
+      "recall": 0.33715377268385865,
+      "confound_detections": 2212
+    },
+    {
+      "threshold": 4,
+      "annotated": 2094,
+      "hit": 588,
+      "detections": 626,
+      "unmatched": 38,
+      "unmatched_inside_cough": 0,
+      "recall": 0.2808022922636103,
+      "confound_detections": 1778
+    },
+    {
+      "threshold": 5,
+      "annotated": 2094,
+      "hit": 462,
+      "detections": 492,
+      "unmatched": 30,
+      "unmatched_inside_cough": 0,
+      "recall": 0.22063037249283668,
+      "confound_detections": 1402
+    },
+    {
+      "threshold": 6,
+      "annotated": 2094,
+      "hit": 359,
+      "detections": 382,
+      "unmatched": 23,
+      "unmatched_inside_cough": 0,
+      "recall": 0.1714422158548233,
+      "confound_detections": 1112
+    },
+    {
+      "threshold": 7,
+      "annotated": 2094,
+      "hit": 271,
+      "detections": 288,
+      "unmatched": 17,
+      "unmatched_inside_cough": 0,
+      "recall": 0.1294173829990449,
+      "confound_detections": 891
+    },
+    {
+      "threshold": 8,
+      "annotated": 2094,
+      "hit": 205,
+      "detections": 214,
+      "unmatched": 9,
+      "unmatched_inside_cough": 0,
+      "recall": 0.09789875835721108,
+      "confound_detections": 695
+    },
+    {
+      "threshold": 9,
+      "annotated": 2094,
+      "hit": 143,
+      "detections": 150,
+      "unmatched": 7,
+      "unmatched_inside_cough": 0,
+      "recall": 0.06829035339063992,
+      "confound_detections": 567
+    },
+    {
+      "threshold": 10,
+      "annotated": 2094,
+      "hit": 112,
+      "detections": 118,
+      "unmatched": 6,
+      "unmatched_inside_cough": 0,
+      "recall": 0.05348615090735435,
+      "confound_detections": 480
+    },
+    {
+      "threshold": 11,
+      "annotated": 2094,
+      "hit": 77,
+      "detections": 83,
+      "unmatched": 6,
+      "unmatched_inside_cough": 0,
+      "recall": 0.03677172874880611,
+      "confound_detections": 406
+    },
+    {
+      "threshold": 12,
+      "annotated": 2094,
+      "hit": 63,
+      "detections": 69,
+      "unmatched": 6,
+      "unmatched_inside_cough": 0,
+      "recall": 0.03008595988538682,
+      "confound_detections": 335
+    },
+    {
+      "threshold": 13,
+      "annotated": 2094,
+      "hit": 45,
+      "detections": 49,
+      "unmatched": 4,
+      "unmatched_inside_cough": 0,
+      "recall": 0.02148997134670487,
+      "confound_detections": 286
+    },
+    {
+      "threshold": 14,
+      "annotated": 2094,
+      "hit": 40,
+      "detections": 42,
+      "unmatched": 2,
+      "unmatched_inside_cough": 0,
+      "recall": 0.019102196752626553,
+      "confound_detections": 252
+    },
+    {
+      "threshold": 15,
+      "annotated": 2094,
+      "hit": 34,
+      "detections": 36,
+      "unmatched": 2,
+      "unmatched_inside_cough": 0,
+      "recall": 0.01623686723973257,
+      "confound_detections": 230
+    },
+    {
+      "threshold": 16,
+      "annotated": 2094,
+      "hit": 27,
+      "detections": 29,
+      "unmatched": 2,
+      "unmatched_inside_cough": 0,
+      "recall": 0.012893982808022923,
+      "confound_detections": 206
+    },
+    {
+      "threshold": 17,
+      "annotated": 2094,
+      "hit": 22,
+      "detections": 24,
+      "unmatched": 2,
+      "unmatched_inside_cough": 0,
+      "recall": 0.010506208213944603,
+      "confound_detections": 182
+    },
+    {
+      "threshold": 18,
+      "annotated": 2094,
+      "hit": 21,
+      "detections": 23,
+      "unmatched": 2,
+      "unmatched_inside_cough": 0,
+      "recall": 0.01002865329512894,
+      "confound_detections": 164
+    },
+    {
+      "threshold": 19,
+      "annotated": 2094,
+      "hit": 18,
+      "detections": 19,
+      "unmatched": 1,
+      "unmatched_inside_cough": 0,
+      "recall": 0.008595988538681949,
+      "confound_detections": 150
+    },
+    {
+      "threshold": 20,
+      "annotated": 2094,
+      "hit": 14,
+      "detections": 15,
+      "unmatched": 1,
+      "unmatched_inside_cough": 0,
+      "recall": 0.0066857688634192934,
+      "confound_detections": 141
+    },
+    {
+      "threshold": 21,
+      "annotated": 2094,
+      "hit": 12,
+      "detections": 13,
+      "unmatched": 1,
+      "unmatched_inside_cough": 0,
+      "recall": 0.0057306590257879654,
+      "confound_detections": 129
+    },
+    {
+      "threshold": 22,
+      "annotated": 2094,
+      "hit": 10,
+      "detections": 11,
+      "unmatched": 1,
+      "unmatched_inside_cough": 0,
+      "recall": 0.004775549188156638,
+      "confound_detections": 118
+    },
+    {
+      "threshold": 23,
+      "annotated": 2094,
+      "hit": 9,
+      "detections": 10,
+      "unmatched": 1,
+      "unmatched_inside_cough": 0,
+      "recall": 0.004297994269340974,
+      "confound_detections": 111
+    },
+    {
+      "threshold": 24,
+      "annotated": 2094,
+      "hit": 4,
+      "detections": 5,
+      "unmatched": 1,
+      "unmatched_inside_cough": 0,
+      "recall": 0.0019102196752626551,
+      "confound_detections": 100
+    },
+    {
+      "threshold": 25,
+      "annotated": 2094,
+      "hit": 3,
+      "detections": 4,
+      "unmatched": 1,
+      "unmatched_inside_cough": 0,
+      "recall": 0.0014326647564469914,
+      "confound_detections": 93
+    }
+  ],
+  "band_sweep": {
+    "5-45": {
+      "annotated": 2094,
+      "hit": 117,
+      "detections": 139,
+      "unmatched": 22,
+      "unmatched_inside_cough": 0,
+      "recall": 0.055873925501432664
+    },
+    "8-45": {
+      "annotated": 2094,
+      "hit": 166,
+      "detections": 185,
+      "unmatched": 19,
+      "unmatched_inside_cough": 0,
+      "recall": 0.07927411652340019
+    },
+    "10-30": {
+      "annotated": 2094,
+      "hit": 176,
+      "detections": 183,
+      "unmatched": 7,
+      "unmatched_inside_cough": 0,
+      "recall": 0.08404966571155682
+    },
+    "10-40": {
+      "annotated": 2094,
+      "hit": 204,
+      "detections": 213,
+      "unmatched": 9,
+      "unmatched_inside_cough": 0,
+      "recall": 0.09742120343839542
+    },
+    "10-45": {
+      "annotated": 2094,
+      "hit": 205,
+      "detections": 214,
+      "unmatched": 9,
+      "unmatched_inside_cough": 0,
+      "recall": 0.09789875835721108
+    },
+    "15-45": {
+      "annotated": 2094,
+      "hit": 286,
+      "detections": 290,
+      "unmatched": 4,
+      "unmatched_inside_cough": 0,
+      "recall": 0.13658070678127984
+    },
+    "20-45": {
+      "annotated": 2094,
+      "hit": 371,
+      "detections": 376,
+      "unmatched": 5,
+      "unmatched_inside_cough": 0,
+      "recall": 0.17717287488061126
+    }
+  },
+  "refractory_sweep": {
+    "0.25": {
+      "annotated": 2094,
+      "hit": 248,
+      "detections": 257,
+      "unmatched": 9,
+      "unmatched_inside_cough": 0,
+      "recall": 0.11843361986628462
+    },
+    "0.5": {
+      "annotated": 2094,
+      "hit": 226,
+      "detections": 235,
+      "unmatched": 9,
+      "unmatched_inside_cough": 0,
+      "recall": 0.10792741165234002
+    },
+    "0.75": {
+      "annotated": 2094,
+      "hit": 214,
+      "detections": 223,
+      "unmatched": 9,
+      "unmatched_inside_cough": 0,
+      "recall": 0.10219675262655205
+    },
+    "1.0": {
+      "annotated": 2094,
+      "hit": 205,
+      "detections": 214,
+      "unmatched": 9,
+      "unmatched_inside_cough": 0,
+      "recall": 0.09789875835721108
+    },
+    "1.25": {
+      "annotated": 2094,
+      "hit": 194,
+      "detections": 203,
+      "unmatched": 9,
+      "unmatched_inside_cough": 0,
+      "recall": 0.09264565425023878
+    },
+    "1.5": {
+      "annotated": 2094,
+      "hit": 183,
+      "detections": 192,
+      "unmatched": 9,
+      "unmatched_inside_cough": 0,
+      "recall": 0.08739255014326648
+    },
+    "2.0": {
+      "annotated": 2094,
+      "hit": 163,
+      "detections": 172,
+      "unmatched": 9,
+      "unmatched_inside_cough": 0,
+      "recall": 0.0778414517669532
+    }
+  },
+  "recall": {
+    "per_subject": {
+      "14287": {
+        "annotated": 123,
+        "hit": 7,
+        "detections": 16,
+        "unmatched": 9,
+        "unmatched_inside_cough": 0,
+        "recall": 0.056910569105691054
+      },
+      "14342": {
+        "annotated": 113,
+        "hit": 6,
+        "detections": 6,
+        "unmatched": 0,
+        "unmatched_inside_cough": 0,
+        "recall": 0.05309734513274336
+      },
+      "14547": {
+        "annotated": 150,
+        "hit": 7,
+        "detections": 7,
+        "unmatched": 0,
+        "unmatched_inside_cough": 0,
+        "recall": 0.04666666666666667
+      },
+      "20794": {
+        "annotated": 72,
+        "hit": 12,
+        "detections": 12,
+        "unmatched": 0,
+        "unmatched_inside_cough": 0,
+        "recall": 0.16666666666666666
+      },
+      "38936": {
+        "annotated": 172,
+        "hit": 4,
+        "detections": 4,
+        "unmatched": 0,
+        "unmatched_inside_cough": 0,
+        "recall": 0.023255813953488372
+      },
+      "47779": {
+        "annotated": 155,
+        "hit": 0,
+        "detections": 0,
+        "unmatched": 0,
+        "unmatched_inside_cough": 0,
+        "recall": 0.0
+      },
+      "49661": {
+        "annotated": 120,
+        "hit": 45,
+        "detections": 45,
+        "unmatched": 0,
+        "unmatched_inside_cough": 0,
+        "recall": 0.375
+      },
+      "55502": {
+        "annotated": 184,
+        "hit": 13,
+        "detections": 13,
+        "unmatched": 0,
+        "unmatched_inside_cough": 0,
+        "recall": 0.07065217391304347
+      },
+      "74768": {
+        "annotated": 148,
+        "hit": 8,
+        "detections": 8,
+        "unmatched": 0,
+        "unmatched_inside_cough": 0,
+        "recall": 0.05405405405405406
+      },
+      "76918": {
+        "annotated": 162,
+        "hit": 10,
+        "detections": 10,
+        "unmatched": 0,
+        "unmatched_inside_cough": 0,
+        "recall": 0.06172839506172839
+      },
+      "84479": {
+        "annotated": 141,
+        "hit": 11,
+        "detections": 11,
+        "unmatched": 0,
+        "unmatched_inside_cough": 0,
+        "recall": 0.07801418439716312
+      },
+      "86463": {
+        "annotated": 131,
+        "hit": 15,
+        "detections": 15,
+        "unmatched": 0,
+        "unmatched_inside_cough": 0,
+        "recall": 0.11450381679389313
+      },
+      "87369": {
+        "annotated": 122,
+        "hit": 33,
+        "detections": 33,
+        "unmatched": 0,
+        "unmatched_inside_cough": 0,
+        "recall": 0.27049180327868855
+      },
+      "87447": {
+        "annotated": 145,
+        "hit": 31,
+        "detections": 31,
+        "unmatched": 0,
+        "unmatched_inside_cough": 0,
+        "recall": 0.21379310344827587
+      },
+      "97706": {
+        "annotated": 156,
+        "hit": 3,
+        "detections": 3,
+        "unmatched": 0,
+        "unmatched_inside_cough": 0,
+        "recall": 0.019230769230769232
+      }
+    },
+    "pooled": {
+      "annotated": 2094,
+      "hit": 205,
+      "detections": 214,
+      "unmatched": 9,
+      "unmatched_inside_cough": 0,
+      "recall": 0.09789875835721108
+    },
+    "per_subject_recall_spread": {
+      "min": 0.0,
+      "q1": 0.04988200589970501,
+      "median": 0.06172839506172839,
+      "q3": 0.1405852417302799,
+      "max": 0.375,
+      "mean": 0.10693769078019146
+    }
+  },
+  "cough_time_fraction_per_recording": {
+    "min": 0.2109704641350211,
+    "q1": 0.39731870166239086,
+    "median": 0.4550546540837803,
+    "q3": 0.5319122566001673,
+    "max": 0.7416762342135477,
+    "mean": 0.4609147990993395
+  },
+  "quiet_windows_in_cough_recordings": {
+    "n": 920,
+    "overlapping_an_annotated_cough": 873,
+    "fraction": 0.9489130434782609
+  },
+  "quiet_background_artifact_auc": 0.8017613764361343,
+  "quiet_background_windows": {
+    "n": 4008,
+    "cough": 920,
+    "confound": 3088
+  },
+  "classification": {
+    "matched": {
+      "n_events": 900,
+      "n_cough_events": 205,
+      "n_confound_events": 695,
+      "n_subjects": 15,
+      "auc": 0.7649271802070539,
+      "auc_ci95": [
+        0.7190826221731701,
+        0.8030673542371143
+      ],
+      "n_bootstrap": 2000,
+      "sensitivity": 0.12682926829268293,
+      "specificity": 0.9784172661870504,
+      "precision": 0.6341463414634146,
+      "confusion": {
+        "tp": 26,
+        "fn": 179,
+        "fp": 15,
+        "tn": 680,
+        "sensitivity": 0.12682926829268293,
+        "specificity": 0.9784172661870504,
+        "precision": 0.6341463414634146
+      },
+      "permutation_null_mean": 0.49057507164999703,
+      "permutation_null_max": 0.5447832953149675,
+      "n_permutation_rounds": 30,
+      "per_class": {
+        "cough": {
+          "n_events": 205,
+          "fraction_called_cough": 0.12682926829268293
+        },
+        "laugh": {
+          "n_events": 191,
+          "fraction_called_cough": 0.020942408376963352
+        },
+        "throat_clearing": {
+          "n_events": 278,
+          "fraction_called_cough": 0.039568345323741004
+        },
+        "deep_breathing": {
+          "n_events": 226,
+          "fraction_called_cough": 0.0
+        }
+      },
+      "auc_cough_vs_each_confound": {
+        "laugh": 0.7077257055293066,
+        "throat_clearing": 0.7073346201087911,
+        "deep_breathing": 0.8841139650334555
+      },
+      "per_subject": {
+        "14287": {
+          "n_cough_events": 7,
+          "n_confound_events": 98,
+          "cough_called_cough": 0.0,
+          "confound_called_cough": 0.02040816326530612,
+          "auc": 0.7040816326530612
+        },
+        "14342": {
+          "n_cough_events": 6,
+          "n_confound_events": 27,
+          "cough_called_cough": 0.0,
+          "confound_called_cough": 0.0,
+          "auc": 0.9135802469135803
+        },
+        "14547": {
+          "n_cough_events": 7,
+          "n_confound_events": 54,
+          "cough_called_cough": 0.0,
+          "confound_called_cough": 0.0,
+          "auc": 0.8306878306878307
+        },
+        "20794": {
+          "n_cough_events": 12,
+          "n_confound_events": 45,
+          "cough_called_cough": 0.0,
+          "confound_called_cough": 0.0,
+          "auc": 0.6981481481481482
+        },
+        "38936": {
+          "n_cough_events": 4,
+          "n_confound_events": 64,
+          "cough_called_cough": 0.0,
+          "confound_called_cough": 0.015625,
+          "auc": 0.59375
+        },
+        "47779": {
+          "n_cough_events": 0,
+          "n_confound_events": 54,
+          "cough_called_cough": null,
+          "confound_called_cough": 0.0,
+          "auc": null
+        },
+        "49661": {
+          "n_cough_events": 45,
+          "n_confound_events": 65,
+          "cough_called_cough": 0.3333333333333333,
+          "confound_called_cough": 0.12307692307692308,
+          "auc": 0.7394871794871795
+        },
+        "55502": {
+          "n_cough_events": 13,
+          "n_confound_events": 28,
+          "cough_called_cough": 0.15384615384615385,
+          "confound_called_cough": 0.0,
+          "auc": 0.7087912087912088
+        },
+        "74768": {
+          "n_cough_events": 8,
+          "n_confound_events": 35,
+          "cough_called_cough": 0.0,
+          "confound_called_cough": 0.02857142857142857,
+          "auc": 0.7392857142857143
+        },
+        "76918": {
+          "n_cough_events": 10,
+          "n_confound_events": 60,
+          "cough_called_cough": 0.0,
+          "confound_called_cough": 0.016666666666666666,
+          "auc": 0.5900000000000001
+        },
+        "84479": {
+          "n_cough_events": 11,
+          "n_confound_events": 34,
+          "cough_called_cough": 0.0,
+          "confound_called_cough": 0.0,
+          "auc": 0.8903743315508021
+        },
+        "86463": {
+          "n_cough_events": 15,
+          "n_confound_events": 33,
+          "cough_called_cough": 0.2,
+          "confound_called_cough": 0.0,
+          "auc": 0.7878787878787878
+        },
+        "87369": {
+          "n_cough_events": 33,
+          "n_confound_events": 29,
+          "cough_called_cough": 0.15151515151515152,
+          "confound_called_cough": 0.034482758620689655,
+          "auc": 0.690700104493208
+        },
+        "87447": {
+          "n_cough_events": 31,
+          "n_confound_events": 31,
+          "cough_called_cough": 0.03225806451612903,
+          "confound_called_cough": 0.03225806451612903,
+          "auc": 0.777315296566077
+        },
+        "97706": {
+          "n_cough_events": 3,
+          "n_confound_events": 38,
+          "cough_called_cough": 0.0,
+          "confound_called_cough": 0.0,
+          "auc": 0.9035087719298245
+        }
+      },
+      "per_subject_auc_spread": {
+        "min": 0.5900000000000001,
+        "q1": 0.6996315192743765,
+        "median": 0.7393864468864468,
+        "q3": 0.81998556998557,
+        "max": 0.9135802469135803,
+        "mean": 0.7548278038132443
+      },
+      "events_from_recordings_without_quiet_window": 163,
+      "excluding_those_events": {
+        "n_events": 737,
+        "auc": 0.7502908343852875,
+        "auc_ci95": [
+          0.7116593991320102,
+          0.7870449532996241
+        ],
+        "sensitivity": 0.0,
+        "specificity": 0.9933665008291874
+      }
+    },
+    "all": {
+      "n_events": 909,
+      "n_cough_events": 214,
+      "n_confound_events": 695,
+      "n_subjects": 15,
+      "auc": 0.7668526860754388,
+      "auc_ci95": [
+        0.7234162153764397,
+        0.8089463893784972
+      ],
+      "n_bootstrap": 2000,
+      "sensitivity": 0.13551401869158877,
+      "specificity": 0.9798561151079137,
+      "precision": 0.6744186046511628,
+      "confusion": {
+        "tp": 29,
+        "fn": 185,
+        "fp": 14,
+        "tn": 681,
+        "sensitivity": 0.13551401869158877,
+        "specificity": 0.9798561151079137,
+        "precision": 0.6744186046511628
+      },
+      "permutation_null_mean": 0.502082857078823,
+      "permutation_null_max": 0.5579977139783501,
+      "n_permutation_rounds": 30,
+      "per_class": {
+        "cough": {
+          "n_events": 214,
+          "fraction_called_cough": 0.13551401869158877
+        },
+        "laugh": {
+          "n_events": 191,
+          "fraction_called_cough": 0.020942408376963352
+        },
+        "throat_clearing": {
+          "n_events": 278,
+          "fraction_called_cough": 0.03597122302158273
+        },
+        "deep_breathing": {
+          "n_events": 226,
+          "fraction_called_cough": 0.0
+        }
+      },
+      "auc_cough_vs_each_confound": {
+        "laugh": 0.7185007584283408,
+        "throat_clearing": 0.7073724198211524,
+        "deep_breathing": 0.8808824745678605
+      },
+      "per_subject": {
+        "14287": {
+          "n_cough_events": 16,
+          "n_confound_events": 98,
+          "cough_called_cough": 0.0625,
+          "confound_called_cough": 0.02040816326530612,
+          "auc": 0.6639030612244897
+        },
+        "14342": {
+          "n_cough_events": 6,
+          "n_confound_events": 27,
+          "cough_called_cough": 0.0,
+          "confound_called_cough": 0.0,
+          "auc": 0.8703703703703703
+        },
+        "14547": {
+          "n_cough_events": 7,
+          "n_confound_events": 54,
+          "cough_called_cough": 0.0,
+          "confound_called_cough": 0.0,
+          "auc": 0.8174603174603176
+        },
+        "20794": {
+          "n_cough_events": 12,
+          "n_confound_events": 45,
+          "cough_called_cough": 0.0,
+          "confound_called_cough": 0.022222222222222223,
+          "auc": 0.7166666666666667
+        },
+        "38936": {
+          "n_cough_events": 4,
+          "n_confound_events": 64,
+          "cough_called_cough": 0.0,
+          "confound_called_cough": 0.015625,
+          "auc": 0.6171875
+        },
+        "47779": {
+          "n_cough_events": 0,
+          "n_confound_events": 54,
+          "cough_called_cough": null,
+          "confound_called_cough": 0.0,
+          "auc": null
+        },
+        "49661": {
+          "n_cough_events": 45,
+          "n_confound_events": 65,
+          "cough_called_cough": 0.4,
+          "confound_called_cough": 0.1076923076923077,
+          "auc": 0.7634188034188034
+        },
+        "55502": {
+          "n_cough_events": 13,
+          "n_confound_events": 28,
+          "cough_called_cough": 0.15384615384615385,
+          "confound_called_cough": 0.0,
+          "auc": 0.6813186813186813
+        },
+        "74768": {
+          "n_cough_events": 8,
+          "n_confound_events": 35,
+          "cough_called_cough": 0.125,
+          "confound_called_cough": 0.02857142857142857,
+          "auc": 0.7571428571428571
+        },
+        "76918": {
+          "n_cough_events": 10,
+          "n_confound_events": 60,
+          "cough_called_cough": 0.0,
+          "confound_called_cough": 0.016666666666666666,
+          "auc": 0.6066666666666667
+        },
+        "84479": {
+          "n_cough_events": 11,
+          "n_confound_events": 34,
+          "cough_called_cough": 0.0,
+          "confound_called_cough": 0.0,
+          "auc": 0.8796791443850267
+        },
+        "86463": {
+          "n_cough_events": 15,
+          "n_confound_events": 33,
+          "cough_called_cough": 0.2,
+          "confound_called_cough": 0.0,
+          "auc": 0.7717171717171717
+        },
+        "87369": {
+          "n_cough_events": 33,
+          "n_confound_events": 29,
+          "cough_called_cough": 0.12121212121212122,
+          "confound_called_cough": 0.034482758620689655,
+          "auc": 0.6938349007314525
+        },
+        "87447": {
+          "n_cough_events": 31,
+          "n_confound_events": 31,
+          "cough_called_cough": 0.0,
+          "confound_called_cough": 0.0,
+          "auc": 0.7908428720083247
+        },
+        "97706": {
+          "n_cough_events": 3,
+          "n_confound_events": 38,
+          "cough_called_cough": 0.0,
+          "confound_called_cough": 0.0,
+          "auc": 0.9210526315789473
+        }
+      },
+      "per_subject_auc_spread": {
+        "min": 0.6066666666666667,
+        "q1": 0.6844477361718742,
+        "median": 0.7602808302808303,
+        "q3": 0.8108059560973193,
+        "max": 0.9210526315789473,
+        "mean": 0.7536615460492697
+      },
+      "events_from_recordings_without_quiet_window": 163,
+      "excluding_those_events": {
+        "n_events": 746,
+        "auc": 0.7404585464286957,
+        "auc_ci95": [
+          0.6957675876374313,
+          0.7850713554029153
+        ],
+        "sensitivity": 0.006993006993006993,
+        "specificity": 0.9917081260364843
+      }
+    }
+  }
+}
