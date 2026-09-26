@@ -132,17 +132,36 @@ its interval.
 - Voluntary coughs, recorded indoors, with one sensor position.
 - 80 events is small; the confidence interval reflects that.
 
-## Next step
+## Label source independent of the accelerometer
 
-The remaining circularity can only be broken with a label source that is
-independent of the accelerometer. The concrete plan:
+This section originally proposed recording audio on a separate device, marking
+every cough from it, and measuring what fraction of those coughs the
+accelerometer detector finds. The EPFL cough dataset provides that measurement
+with someone else's annotations: 15 subjects, seated, coughs annotated from
+audio. See [CROSS_DATASET.md](CROSS_DATASET.md).
 
-1. Record a session with audio captured on a separate device.
-2. Clap at the start and at the end of the session, to align the two clocks
-   and to correct drift between them linearly.
-3. Mark every cough from the audio.
-4. Measure what fraction of those audible coughs the accelerometer-based
-   detector finds.
+What was measured, with the published detector (band 10-45 Hz at 100 Hz,
+threshold 8 MAD, refractory 1.0 s):
 
-That single number converts the main caveat into a measurement, and bounds
-everything reported here.
+- Recall is 0.098: 205 of 2,094 annotated coughs are detected. Per subject it
+  ranges from 0.000 to 0.375, median 0.062.
+- 205 of the 214 detections hit an annotated cough.
+- The detection count does not hold over a range of thresholds, as it did on
+  the seated recordings here. In the EPFL recordings coughs cover about half of
+  each recording, and the MAD threshold assumes transients are rare.
+- Cough against confound: AUC 0.765, 95% CI [0.719, 0.803], leave-one-subject-out.
+  Laughing and throat clearing are the least separated from coughing (AUC 0.708
+  and 0.707), deep breathing the most (0.884).
+
+What is still open:
+
+- Recall on this repository's own protocol. The EPFL recordings are short and
+  densely packed with coughs; the recordings here have sparse coughs over 2
+  minutes, where the detector's count matched the written-down counts. The
+  number that bounds the results in this document is the detector's recall on
+  recordings like these, against audio. That still needs the recording plan
+  above: audio on a separate device, a clap at the start and end to align the
+  clocks and correct drift linearly, every cough marked from the audio.
+- Whether cough-like movements can be separated from laughing. Both datasets
+  put laughing closest to coughing.
+- Spontaneous coughs. Both datasets use voluntary coughs.
