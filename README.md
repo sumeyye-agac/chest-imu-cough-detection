@@ -18,12 +18,20 @@ so they can go where a microphone cannot.
   Across seven seated sessions the cough-vs-confound AUC is 0.832, 95% CI
   [0.713, 0.986].
 - **The EPFL cough dataset (15 subjects) adds labels annotated from audio.**
-  Against those labels the detector finds 1 cough in 10 (recall 0.098; per
-  subject 0.000 to 0.375), and 205 of its 214 detections are real coughs. The
-  EPFL recordings are about half coughing, which breaks the detector's
-  assumption that transients are rare. Across the 15 subjects, cough vs.
-  confound gives AUC 0.765, 95% CI [0.719, 0.803]. Laughing and throat clearing
-  are again the least separated from coughing (AUC 0.708 and 0.707).
+  Under its own threshold the detector finds 205 of 2,094 annotated coughs
+  (recall 0.098), and 205 of its 214 detections are real coughs. That number
+  measured the port more than the method: the EPFL recordings are about half
+  coughing, which lifts the detector's self-set threshold 1.74 times above the
+  true background. With the threshold placed on the background outside the
+  annotations, recall is 0.270 at precision 0.956. That is still low. Coughs on
+  that device rise a median 7.5 background MADs above the background, against
+  a median 88 on the recordings in this repository, and about half of them
+  never reach a threshold of 8.
+- **Across the 15 EPFL subjects, cough vs. confound gives AUC 0.765**, 95% CI
+  [0.719, 0.803], with the published feature reference, and 0.874 [0.803,
+  0.924] with a reference level taken from the annotations. The second figure
+  is an upper estimate: the reference still differs between the classes.
+  Laughing and throat clearing stay the confounds closest to coughing.
 
 ## Limits
 
@@ -51,6 +59,7 @@ Requires Python 3.10 or later.
     # EPFL dataset (downloaded, about 852 MB; audio deleted after extraction)
     python scripts/fetch_epfl.py
     python scripts/run_epfl.py              # results/epfl_results.json, about 4 minutes
+    python scripts/threshold_placement.py   # results/threshold_placement.json, about 3 minutes
 
 The last digit of some values may differ across scikit-learn versions.
 
@@ -121,6 +130,12 @@ count at a single threshold on the way down. Lowering the band's lower edge to
 On the EPFL data (band 10-45 Hz, because the IMU runs at 100 Hz) the count
 does not hold: it falls at every threshold step.
 
+The threshold is set from the recording's own background, which assumes
+events occupy a small share of it. The EPFL cough recordings are about half
+coughing, and the threshold lands 1.74 times above the true background.
+Estimators that survive dense events also change the single-subject event
+times, so the published estimator is kept.
+
 Details: [docs/DETECTOR.md](docs/DETECTOR.md),
 [docs/FINDINGS.md](docs/FINDINGS.md), [docs/CROSS_DATASET.md](docs/CROSS_DATASET.md).
 </details>
@@ -129,39 +144,45 @@ Details: [docs/DETECTOR.md](docs/DETECTOR.md),
 <summary><b>Cross-dataset results (EPFL, 15 subjects, seated)</b></summary>
 
 Published detector with a 10-45 Hz band. A detection hits a cough if it falls
-within 0.2 s of an annotated cough.
+within 0.2 s of an annotated cough. "Background from annotations" keeps the
+detector and the threshold of 8 but takes the baseline and MAD from samples
+outside annotated coughs: a bound on what the published threshold placement
+costs, not a detector that runs without labels.
 
-| subject | annotated coughs | hit | recall | detections matching no cough | AUC (cough vs. confound) |
+| subject | annotated coughs | recall, published | recall, background from annotations | cough peak, median background MADs | AUC, published reference |
 |---|---|---|---|---|---|
-| 14287 | 123 | 7 | 0.057 | 9 | 0.704 |
-| 14342 | 113 | 6 | 0.053 | 0 | 0.914 |
-| 14547 | 150 | 7 | 0.047 | 0 | 0.831 |
-| 20794 | 72 | 12 | 0.167 | 0 | 0.698 |
-| 38936 | 172 | 4 | 0.023 | 0 | 0.594 |
-| 47779 | 155 | 0 | 0.000 | 0 | no detected coughs |
-| 49661 | 120 | 45 | 0.375 | 0 | 0.739 |
-| 55502 | 184 | 13 | 0.071 | 0 | 0.709 |
-| 74768 | 148 | 8 | 0.054 | 0 | 0.739 |
-| 76918 | 162 | 10 | 0.062 | 0 | 0.590 |
-| 84479 | 141 | 11 | 0.078 | 0 | 0.890 |
-| 86463 | 131 | 15 | 0.115 | 0 | 0.788 |
-| 87369 | 122 | 33 | 0.270 | 0 | 0.691 |
-| 87447 | 145 | 31 | 0.214 | 0 | 0.777 |
-| 97706 | 156 | 3 | 0.019 | 0 | 0.904 |
-| **pooled** | **2,094** | **205** | **0.098** | **9** | **0.765 [0.719, 0.803]** |
+| 14287 | 123 | 0.057 | 0.146 | 4.2 | 0.704 |
+| 14342 | 113 | 0.053 | 0.177 | 6.5 | 0.914 |
+| 14547 | 150 | 0.047 | 0.080 | 3.6 | 0.831 |
+| 20794 | 72 | 0.167 | 0.375 | 10.6 | 0.698 |
+| 38936 | 172 | 0.023 | 0.128 | 4.4 | 0.594 |
+| 47779 | 155 | 0.000 | 0.200 | 6.1 | no detected coughs |
+| 49661 | 120 | 0.375 | 0.583 | 19.0 | 0.739 |
+| 55502 | 184 | 0.071 | 0.109 | 2.8 | 0.709 |
+| 74768 | 148 | 0.054 | 0.264 | 6.9 | 0.739 |
+| 76918 | 162 | 0.062 | 0.333 | 10.2 | 0.590 |
+| 84479 | 141 | 0.078 | 0.376 | 10.2 | 0.890 |
+| 86463 | 131 | 0.115 | 0.282 | 7.3 | 0.788 |
+| 87369 | 122 | 0.270 | 0.434 | 15.1 | 0.691 |
+| 87447 | 145 | 0.214 | 0.352 | 10.2 | 0.777 |
+| 97706 | 156 | 0.019 | 0.378 | 12.5 | 0.904 |
+| **pooled** | **2,094** | **0.098** (precision 0.958) | **0.270** (precision 0.956) | **7.5** | **0.765 [0.719, 0.803]** |
 
 Per-subject AUCs rest on 3 to 45 cough transients each.
 
 | | single subject | EPFL |
 |---|---|---|
-| AUC, 95% CI | 0.832 [0.713, 0.986], 7 sessions | 0.765 [0.719, 0.803], 15 subjects |
-| least separated confound | talking and laughing | laugh (0.708), throat clearing (0.707) |
-| permutation null, mean | 0.499 | 0.491 |
-| quiet-background check | 0.595 | 0.802, not interpretable |
+| AUC, 95% CI, published reference | 0.832 [0.713, 0.986], 7 sessions | 0.765 [0.719, 0.803], 15 subjects |
+| AUC, 95% CI, annotation reference | not applicable | 0.874 [0.803, 0.924], upper estimate |
+| least separated confound | talking and laughing | laugh and throat clearing |
+| permutation null, mean | 0.499 | 0.491; 0.484 with the annotation reference |
+| quiet-background check | 0.595 | 0.802; 0.662 with the annotation reference |
+| cough peak, background MADs | median 87.6 | median 7.5 |
 
-The EPFL quiet-background check fails for a measured reason: 95% of the
-"quiet" windows in cough recordings overlap an annotated cough that the
-detector missed.
+With the published reference the EPFL background check is not interpretable:
+95% of its "quiet" windows in cough recordings overlap an annotated cough. The
+annotation reference brings it to 0.662, not 0.5, because confound recordings
+have no annotations and keep a detection-based reference.
 
 Details: [docs/CROSS_DATASET.md](docs/CROSS_DATASET.md),
 [docs/EPFL_DATASET.md](docs/EPFL_DATASET.md).
