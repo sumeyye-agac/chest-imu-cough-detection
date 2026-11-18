@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="120" viewBox="0 0 860 120" role="img" aria-label="Pipeline: chest IMU, detection, features per transient, random forest">
+  <style>
+    .box { fill: #f6f8fa; stroke: #57606a; stroke-width: 1.5; }
+    .title { fill: #1f2328; font: 600 15px -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .sub { fill: #57606a; font: 13px -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .arrow { stroke: #57606a; stroke-width: 1.5; fill: none; }
+    .head { fill: #57606a; }
+    @media (prefers-color-scheme: dark) {
+      .box { fill: #161b22; stroke: #8b949e; }
+      .title { fill: #e6edf3; }
+      .sub { fill: #8b949e; }
+      .arrow { stroke: #8b949e; }
+      .head { fill: #8b949e; }
+    }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path class="head" d="M0,0 L10,5 L0,10 z"/>
+    </marker>
+  </defs>
+
+  <g text-anchor="middle">
+    <rect class="box" x="10" y="10" width="180" height="100" rx="8"/>
+    <text class="title" x="100" y="46">Chest IMU</text>
+    <text class="sub" x="100" y="68">accelerometer +</text>
+    <text class="sub" x="100" y="86">gyroscope</text>
+
+    <rect class="box" x="230" y="10" width="180" height="100" rx="8"/>
+    <text class="title" x="320" y="46">Detection</text>
+    <text class="sub" x="320" y="68">10–80 Hz envelope,</text>
+    <text class="sub" x="320" y="86">peaks above 8 MAD</text>
+
+    <rect class="box" x="450" y="10" width="180" height="100" rx="8"/>
+    <text class="title" x="540" y="46">Features</text>
+    <text class="sub" x="540" y="68">band energy, spectral</text>
+    <text class="sub" x="540" y="86">shape, duration</text>
+
+    <rect class="box" x="670" y="10" width="180" height="100" rx="8"/>
+    <text class="title" x="760" y="55">Random forest</text>
+    <text class="sub" x="760" y="77">cough / not cough</text>
+  </g>
+
+  <line class="arrow" x1="190" y1="60" x2="228" y2="60" marker-end="url(#a)"/>
+  <line class="arrow" x1="410" y1="60" x2="448" y2="60" marker-end="url(#a)"/>
+  <line class="arrow" x1="630" y1="60" x2="668" y2="60" marker-end="url(#a)"/>
+</svg>

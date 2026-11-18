@@ -7,42 +7,88 @@ or a bedroom at night, a microphone records other people and is often not
 acceptable. A chest-worn accelerometer and gyroscope record body movement only,
 so they can go where a microphone cannot.
 
+**Activities, my recordings:** coughing (paced and natural), quiet sitting,
+quiet standing, talking, throat clearing, walking, arm movement.
+
+**Activities, EPFL dataset:** coughing, laughing, throat clearing, deep
+breathing, each while sitting and while walking.
+
+<p align="center">
+  <img src="docs/belt-outside.jpg" alt="A Movesense sensor clipped into a chest belt" width="390">
+  <br>
+  <em>The sensor I wore for this repository's own recordings: a Movesense sensor in a chest belt.</em>
+</p>
+
+<p align="center">
+  <img src="docs/pipeline.svg" alt="Pipeline: chest IMU (accelerometer and gyroscope), then detection (10-80 Hz envelope, peaks above 8 MAD), then features (band energy, spectral shape, duration), then a random forest that outputs cough or not cough" width="860">
+</p>
+
+Detection uses the accelerometer only. The features use both the
+accelerometer and the gyroscope. The band is 10-80 Hz on my recordings and
+10-45 Hz on EPFL, whose IMU runs at 100 Hz.
+
 ## What was found
 
-- **Cough-like movements are detected, when coughs are sparse.** On one adult
-  subject, seated, the detector reproduces the counts written down during
-  recording (8 of 8, and 12 against 11) and holds that count over a wide range
-  of thresholds.
-- **They are not separated from laughing.** On that subject, 64% of the
-  transients in the talking and laughing session are classified as coughs.
-  Across seven seated sessions the cough-vs-confound AUC is 0.832, 95% CI
-  [0.713, 0.986].
-- **The EPFL cough dataset (15 subjects) adds labels annotated from audio.**
-  Under its own threshold the detector finds 205 of 2,094 annotated coughs
-  (recall 0.098), and 205 of its 214 detections are real coughs. That number
-  measured the port more than the method: the EPFL recordings are about half
-  coughing, which lifts the detector's self-set threshold 1.74 times above the
-  true background. With the threshold placed on the background outside the
-  annotations, recall is 0.270 at precision 0.956. That is still low: about
-  half of the EPFL coughs never reach a threshold of 8. Coughs there rise a
-  median 7.5 MADs above that device's own background, against 88 on the
-  recordings in this repository. That ratio does not say which side differs,
-  and the EPFL units cannot be calibrated. Measured against walking, which
-  needs no calibration, the coughs differ by a factor of about 1.5 to 2.5, so
-  most of the gap is a higher background on the EPFL recordings, not coughs
-  ten times weaker. Walking differs between people, so this is an
-  order-of-magnitude check.
-- **Across the 15 EPFL subjects, cough vs. confound gives AUC 0.765**, 95% CI
-  [0.719, 0.803], with the published feature reference. How the feature
-  reference is built moves this number: 0.874 [0.803, 0.924] with a cough-free
-  reference for cough recordings only, 0.719 [0.665, 0.777] with the same rule
-  for both classes. Neither alternative reference is clean, so that check is
-  inconclusive and 0.765 stays the reported figure. Laughing and throat
-  clearing stay the confounds closest to coughing.
+In one line: cough-like movements are detected when coughs are sparse, but
+they are not reliably told apart from laughing.
+
+| | My recordings | EPFL cough dataset |
+|---|---|---|
+| Subjects | 1 (me), 7 seated sessions | 15 |
+| Cough / not-cough label | what I was doing in each session | the recording's class (cough, laugh, throat clearing, deep breathing) |
+| Independent cough labels | none; I wrote down counts while recording | coughs annotated from audio |
+| Step 1, detector | counts match my notes: 8 for 8 coughs, 12 for 11 throat clears | finds 205 of 2,094 annotated coughs (10%); 205 of its 214 detections are real coughs |
+| Step 2, classifier: cough or not? (AUC, 95% CI) | 0.832 [0.713, 0.986] | 0.765 [0.719, 0.803] |
+
+**On my own recordings**
+
+- While I was seated, the detector's counts match the ones I wrote down, and
+  keep matching over a wide range of thresholds.
+- Talking and laughing is the problem: 64% of the transients in that session
+  are classified as coughs, against 33% for throat clearing and 0% for quiet
+  sitting. Talking and laughing were recorded in one session, so which of the
+  two caused each transient is not known.
+
+**On the EPFL dataset**
+
+- Laughing and throat clearing are the confounds closest to coughing (AUC
+  0.708 and 0.707 against coughs); deep breathing is the furthest (0.884).
+- Recall is low. With the threshold placed on the background outside the
+  annotated coughs, it rises from 10% to 27%. About half of the EPFL coughs
+  never reach the detector's threshold of 8 MAD.
+- Coughs there rise a median 7.5 MADs above the background, against 88 in my
+  recordings. Most of that gap is a higher background on the EPFL recordings,
+  not weaker coughs.
+
+<details>
+<summary><b>More on the EPFL numbers</b></summary>
+
+**Threshold.** Under its own self-set threshold the detector finds 205 of
+2,094 annotated coughs (recall 0.098), and 205 of its 214 detections are real
+coughs. That number measured the port more than the method: the EPFL
+recordings are about half coughing, which lifts the self-set threshold 1.74
+times above the true background. With the threshold placed on the
+background outside the annotations, recall is 0.270 at precision 0.956. That
+uses the annotations to place the threshold, so it is a bound, not something
+the detector can do without labels.
+
+**Background vs. cough strength.** The 7.5 vs. 88 ratio alone does not say
+which side differs, and the EPFL units cannot be calibrated. Measured against
+walking, which needs no calibration, the coughs differ by a factor of about
+1.5 to 2.5. So most of the gap is a higher background on the EPFL recordings,
+not coughs ten times weaker. Walking differs between people, so this is an
+order-of-magnitude check.
+
+**Feature reference.** The 0.765 AUC uses the published feature reference.
+How that reference is built moves the number: 0.874 [0.803, 0.924] with a
+cough-free reference for cough recordings only, 0.719 [0.665, 0.777] with the
+same rule for both classes. Neither alternative reference is clean, so that
+check is inconclusive and 0.765 stays the reported figure.
+</details>
 
 ## Limits
 
-- One subject in this repository's own recordings; 15 in the EPFL data.
+- One subject (me :) ) in this repository's own recordings; 15 in the EPFL data.
 - All coughs are voluntary, recorded indoors, at one sensor position.
 - The detector's recall on this repository's own protocol, against audio, has
   not been measured. The EPFL measurement comes from a different device,
@@ -203,8 +249,8 @@ Details: [docs/CROSS_DATASET.md](docs/CROSS_DATASET.md),
 <details>
 <summary><b>The dataset</b></summary>
 
-`data/sessions/` holds 12 sessions of about two minutes each, recorded from
-one adult subject with a chest-worn Movesense sensor, using
+`data/sessions/` holds 12 sessions of about two minutes each, recorded on
+myself with a chest-worn Movesense sensor, using
 [movesense-ecg-hrv-dashboard](https://github.com/sumeyye-agac/movesense-ecg-hrv-dashboard).
 Each session is a ZIP with `imu.csv` (accelerometer, gyroscope, magnetometer;
 subscribed at 208 Hz, delivered at about 216 Hz), `meta.json` and a
