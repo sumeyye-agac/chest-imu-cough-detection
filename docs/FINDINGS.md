@@ -121,6 +121,63 @@ The confidence interval is wide because the unit of independence is the
 session, and there are seven. The AUC of 0.832 should not be presented without
 its interval.
 
+## Burst shape in the talking session
+
+A lead, not a result: one session, one subject.
+
+`scripts/burst_shape.py` (output in `results/burst_shape.json`) measures, for
+every detected transient, how long the envelope stays above 3 MAD around the
+peak (searched up to 3 s each way) and how many detected transients fall
+inside that stretch. Two MAD scales are reported, because the answer depends
+on the choice: the background scale (samples more than 2 s from any transient,
+as in the peak-height measurement) and the detector's own scale (the whole
+recording).
+
+| | background scale | detector scale |
+|---|---|---|
+| 17 natural seated coughs, burst duration | 0.68 to 2.04 s, median 1.32 | 0.67 to 1.49 s, median 1.07 |
+| all 43 seated coughs, transients sharing a burst | 0 | 0 |
+| talking session, transients sharing a burst | 10 of 22 | 8 of 22 |
+| talking session, transients at 50 MAD or more | 8 | 5 |
+| their burst durations | 1.15 to 2.34 s; 6 of 8 in double-peaked bursts | 0.42, 1.03, 1.69, 1.90, 2.30 s; the three longest double-peaked |
+
+What holds on both scales: every seated cough is a single-peaked burst, and in
+the talking session 8 to 10 of 22 transients share their burst with a second
+detected peak. Duration alone does not separate them on the background scale:
+one cough lasts 2.04 s, longer than three of the five double-peaked talking
+bursts (1.40 to 2.34 s).
+
+The talking session holds talking and laughing in one recording, so which
+transients are laughs is not known. The idea that the double-peaked bursts are
+laughs is a hypothesis.
+
+### Tested with a wider window and burst-shape features
+
+`scripts/shape_comparison.py` (output in `results/shape_comparison.json`) adds
+an alternative feature set, `src/chest_imu_cough/features_shape.py`: the
+published features plus burst duration, the number of detected transients in
+the burst, the median interval between them, and burst duration over the main
+peak's width at half height. Each is computed over three windows. Published
+features over the wider windows alone are run as a control.
+
+| configuration | AUC [95% CI] | talking called cough | throat clearing called cough |
+|---|---|---|---|
+| published, 0.4 / 0.6 s | 0.832 [0.713, 0.986] | 64% | 33% |
+| published features, 0.5 / 2.0 s | 0.856 [0.716, 0.992] | 86% | 25% |
+| published features, 1.0 / 2.5 s | 0.855 [0.742, 0.997] | 86% | 17% |
+| with burst shape, 0.4 / 0.6 s | 0.820 [0.684, 0.983] | 64% | 33% |
+| with burst shape, 0.5 / 2.0 s | 0.857 [0.715, 0.992] | 86% | 17% |
+| with burst shape, 1.0 / 2.5 s | 0.871 [0.753, 0.997] | 86% | 17% |
+
+On these sessions the wider windows move the talking session the wrong way:
+86% of its transients are called coughs, against 64% as published. The AUC
+still rises: throat clearing drops, and one paced-cough session goes from 85%
+to 92%. Every interval overlaps the published one.
+
+On EPFL, where laugh is its own class, the result is mixed; see
+[CROSS_DATASET.md](CROSS_DATASET.md#burst-shape-and-a-wider-window). The
+feature set stays as published.
+
 ## Limits
 
 - One subject.

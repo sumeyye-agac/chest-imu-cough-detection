@@ -366,6 +366,81 @@ before these checks, uses no annotations, and lies between the two
 alternatives. The 0.874 remains visible as what an asymmetric reference gives,
 the 0.719 as what a symmetric but contaminated reference gives.
 
+## Burst shape and a wider window
+
+The lead, from one session of one subject (see
+[FINDINGS.md](FINDINGS.md#burst-shape-in-the-talking-session)): seated coughs
+are single-peaked bursts of about 1 s, while several large transients in the
+talking session sit in double-peaked bursts up to 2.3 s long. The published
+window, 0.4 s before and 0.6 s after the peak, cannot contain such a burst. If
+that is why laughs are not separated, a wider window with burst-shape features
+should raise cough vs. laugh. EPFL labels laugh as its own class, so it is the
+test.
+
+`scripts/shape_comparison.py`, output in `results/shape_comparison.json`.
+Seated, leave-one-subject-out, matched variant, published reference. Cough vs.
+each confound uses the scores of the cough-vs-all-confounds model, as above.
+The burst-shape set is the published features plus burst duration, number of
+detected transients in the burst, median interval between them, and burst
+duration over half-height width, on the detector's MAD scale.
+
+The rule was fixed before the first run. For each shape window, a paired
+bootstrap over subjects gives a 98.33% interval (Bonferroni over three
+windows) for the change in cough-vs-laugh AUC, and for that change minus the
+change in cough vs. deep breathing.
+(a) the first interval lies above 0; (b) the second does too.
+Supported: (a) and (b) in some window. Mixed: (a) without (b). Not supported:
+(a) in no window.
+
+AUC, 95% CI (subject-level bootstrap):
+
+| configuration | overall | laugh | throat clearing | deep breathing |
+|---|---|---|---|---|
+| published, 0.4 / 0.6 s | 0.765 [0.719, 0.803] | 0.708 [0.607, 0.797] | 0.707 [0.659, 0.768] | 0.884 [0.822, 0.930] |
+| published features, 0.5 / 2.0 s | 0.799 [0.744, 0.837] | 0.766 [0.675, 0.834] | 0.730 [0.661, 0.790] | 0.911 [0.854, 0.950] |
+| published features, 1.0 / 2.5 s | 0.805 [0.750, 0.852] | 0.766 [0.663, 0.851] | 0.752 [0.694, 0.811] | 0.903 [0.859, 0.942] |
+| with burst shape, 0.4 / 0.6 s | 0.781 [0.732, 0.826] | 0.701 [0.605, 0.775] | 0.735 [0.662, 0.817] | 0.903 [0.858, 0.936] |
+| with burst shape, 0.5 / 2.0 s | 0.815 [0.770, 0.852] | 0.766 [0.685, 0.830] | 0.763 [0.712, 0.831] | 0.921 [0.873, 0.958] |
+| with burst shape, 1.0 / 2.5 s | 0.816 [0.768, 0.860] | 0.765 [0.681, 0.837] | 0.765 [0.705, 0.835] | 0.921 [0.882, 0.954] |
+
+Change against published, 98.33% paired interval:
+
+| configuration | laugh | deep breathing | laugh minus deep breathing | (a) | (b) |
+|---|---|---|---|---|---|
+| with burst shape, 0.4 / 0.6 s | -0.007 [-0.085, +0.057] | +0.019 [-0.015, +0.061] | -0.026 [-0.077, +0.024] | no | no |
+| with burst shape, 0.5 / 2.0 s | +0.059 [+0.0001, +0.118] | +0.037 [-0.002, +0.101] | +0.022 [-0.046, +0.080] | yes | no |
+| with burst shape, 1.0 / 2.5 s | +0.057 [-0.017, +0.152] | +0.037 [-0.013, +0.116] | +0.020 [-0.042, +0.088] | no | no |
+| published features, 0.5 / 2.0 s (control) | +0.058 [-0.001, +0.109] | +0.027 [-0.012, +0.071] | +0.032 [-0.038, +0.093] | | |
+| published features, 1.0 / 2.5 s (control) | +0.058 [-0.030, +0.150] | +0.019 [-0.036, +0.095] | +0.039 [-0.025, +0.091] | | |
+
+The rule gives **mixed**. In one window cough vs. laugh rises by more than
+chance allows, with a lower bound of +0.0001, which is at the edge. In no
+window does it rise more than cough vs. deep breathing by more than chance
+allows. Every confound rises with the wider windows.
+
+What the mixture is made of:
+
+- The gain comes from the window, not from the burst-shape features. Published
+  features over 0.5 / 2.0 s raise cough vs. laugh by +0.058; adding the shape
+  features gives +0.059. At the published window the shape features change
+  cough vs. laugh by -0.007.
+- On EPFL the shape features do not see trains. Bursts last a median 0.24 s in
+  both cough and laugh transients, and no cough or laugh transient shares its
+  burst with a second detected peak, in any window. The recordings are short
+  and dense, so the whole-recording MAD is high and the 3 MAD level sits high.
+  The double-peaked shape seen in the talking session is not measured here, so
+  this test does not confirm or rule out that mechanism. It does show that a
+  wider window helps all confounds.
+- Permutation null for the burst-shape set at 0.5 / 2.0 s (30 rounds): overall
+  mean 0.499, max 0.553; cough vs. laugh mean 0.475, max 0.613.
+
+On the single subject the wider windows raise the share of talking-session
+transients called cough from 64% to 86% (see FINDINGS.md), the opposite of
+what the lead predicts.
+
+The feature set stays as published. The comparison stays reproducible with
+the script above.
+
 ## One subject against fifteen
 
 | | single subject, seated ([FINDINGS.md](FINDINGS.md)) | EPFL, 15 subjects, seated |

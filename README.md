@@ -46,8 +46,13 @@ they are not reliably told apart from laughing.
   keep matching over a wide range of thresholds.
 - Talking and laughing is the problem: 64% of the transients in that session
   are classified as coughs, against 33% for throat clearing and 0% for quiet
-  sitting. Talking and laughing were recorded in one session, so which of the
-  two caused each transient is not known.
+  sitting. In that session several large transients sit in double-peaked
+  bursts up to 2.3 s long, while every seated cough is a single burst (five
+  events, one session, one subject). I tested this on EPFL with a wider
+  feature window: cough vs. laugh rises by about 0.06 AUC, but by the same
+  amount without the burst-shape features, and every other confound rises too.
+  On my own recordings the wider window moves the talking session the wrong
+  way, from 64% to 86% called cough.
 
 **On the EPFL dataset**
 
@@ -114,6 +119,10 @@ Requires Python 3.10 or later.
     python scripts/run_epfl.py              # results/epfl_results.json, about 4 minutes
     python scripts/threshold_placement.py   # results/threshold_placement.json, about 3 minutes
     python scripts/reference_checks.py      # results/reference_checks.json, about 2 minutes
+
+    # burst shape: the talking-session lead and its test on EPFL
+    python scripts/burst_shape.py           # results/burst_shape.json
+    python scripts/shape_comparison.py      # results/shape_comparison.json, about 3 minutes
 
 The last digit of some values may differ across scikit-learn versions.
 
@@ -244,6 +253,47 @@ cough recordings overlap a cough.
 
 Details: [docs/CROSS_DATASET.md](docs/CROSS_DATASET.md),
 [docs/EPFL_DATASET.md](docs/EPFL_DATASET.md).
+</details>
+
+<details>
+<summary><b>Burst shape: a lead from the talking session</b></summary>
+
+A lead, not a result: five events, one session, one subject.
+
+I measured how long the envelope stays above 3 MAD around each detected peak,
+and how many detected peaks fall inside that stretch
+(`scripts/burst_shape.py`). All 43 seated coughs are single-peaked bursts. The
+17 natural ones last 0.67 to 1.49 s, median 1.07 s. In the talking session,
+the five transients at 50 MAD or more last 0.42, 1.03, 1.69, 1.90 and 2.30 s,
+and the three longest each hold two detected peaks. These numbers are on the
+detector's own MAD scale. On the background scale used for peak heights, eight
+transients reach 50 MAD, and one cough lasts 2.04 s, longer than three of the
+five double-peaked talking bursts. Talking and laughing share the session, so
+whether the double-peaked bursts are laughs is a hypothesis.
+
+The test (`scripts/shape_comparison.py`): the published features plus burst
+duration, peaks in the burst, the interval between them and burst duration
+over half-height width, over the published window (0.4 / 0.6 s) and two wider
+ones. On EPFL, where laugh is its own class:
+
+| configuration | cough vs. laugh | cough vs. throat clearing | cough vs. deep breathing | overall |
+|---|---|---|---|---|
+| published, 0.4 / 0.6 s | 0.708 | 0.707 | 0.884 | 0.765 |
+| published features, 0.5 / 2.0 s | 0.766 | 0.730 | 0.911 | 0.799 |
+| with burst shape, 0.4 / 0.6 s | 0.701 | 0.735 | 0.903 | 0.781 |
+| with burst shape, 0.5 / 2.0 s | 0.766 | 0.763 | 0.921 | 0.815 |
+| with burst shape, 1.0 / 2.5 s | 0.765 | 0.765 | 0.921 | 0.816 |
+
+The rule, fixed before the run, asked for cough vs. laugh to rise beyond
+chance and by more than cough vs. deep breathing. It gave mixed: the first
+holds in one window, at the edge, and the second in none. The gain comes from
+the wider window, not from the shape features. On EPFL the shape features see
+no trains: cough and laugh bursts both last a median 0.24 s, and none holds a
+second detected peak. So this test neither confirms nor rules out the
+double-peak idea. The feature set stays as published.
+
+Details: [docs/FINDINGS.md](docs/FINDINGS.md#burst-shape-in-the-talking-session),
+[docs/CROSS_DATASET.md](docs/CROSS_DATASET.md#burst-shape-and-a-wider-window).
 </details>
 
 <details>
