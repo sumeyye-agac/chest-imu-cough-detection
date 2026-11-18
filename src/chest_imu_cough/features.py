@@ -52,11 +52,13 @@ def quiet_baseline(session: Session, events: np.ndarray, fs: float = SAMPLE_RATE
     return np.median(acc_e, axis=0), np.median(gyro_e, axis=0)
 
 
-def event_features(session: Session, events: np.ndarray, fs: float = SAMPLE_RATE_HZ) -> np.ndarray:
+def event_features(session: Session, events: np.ndarray, fs: float = SAMPLE_RATE_HZ,
+                   pre_s: float = PRE_S, post_s: float = POST_S) -> np.ndarray:
+    """Published features. pre_s and post_s default to the published window."""
     ref_acc, ref_gyro = quiet_baseline(session, events, fs)
     rows = []
     for t0 in events:
-        mask = (session.t >= t0 - PRE_S) & (session.t <= t0 + POST_S)
+        mask = (session.t >= t0 - pre_s) & (session.t <= t0 + post_s)
         row = []
         for channel, ref in ((session.acc, ref_acc), (session.gyro, ref_gyro)):
             w = channel[mask]
