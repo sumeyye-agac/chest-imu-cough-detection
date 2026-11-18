@@ -1,0 +1,2304 @@
+{
+  "settings": {
+    "burst_level_mad": 3.0,
+    "search_s_each_way": 3.0,
+    "cough_scale_mad": 50.0,
+    "band_hz": [
+      10.0,
+      80.0
+    ],
+    "threshold_mad": 8.0,
+    "refractory_s": 1.0
+  },
+  "sessions": {
+    "cough_metronomic_01": {
+      "is_cough_session": true,
+      "transients": [
+        {
+          "t_s": 7.01675009727478,
+          "background": {
+            "height": 15.538969966610246,
+            "duration_s": 0.2913752913752914,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 11.647612381976476,
+            "duration_s": 0.23125023125023125,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 9.781625032424927,
+          "background": {
+            "height": 92.14502223624281,
+            "duration_s": 1.2117512117512117,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 70.8227676271312,
+            "duration_s": 1.1053761053761053,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 19.356125116348267,
+          "background": {
+            "height": 64.84765414372403,
+            "duration_s": 1.1285011285011284,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 49.73662695284842,
+            "duration_s": 0.9573759573759574,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 28.6177499294281,
+          "background": {
+            "height": 98.11615675758574,
+            "duration_s": 1.2210012210012209,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 75.43523363760384,
+            "duration_s": 1.2025012025012025,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 42.058249950408936,
+          "background": {
+            "height": 28.23338630909791,
+            "duration_s": 0.7030007030007029,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 21.453548539205112,
+            "duration_s": 0.6151256151256151,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 49.88837504386902,
+          "background": {
+            "height": 50.828083615651934,
+            "duration_s": 0.9018759018759018,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 38.90706143041348,
+            "duration_s": 0.6613756613756614,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 59.53224992752075,
+          "background": {
+            "height": 79.09306908523261,
+            "duration_s": 0.9065009065009064,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 60.74064838092534,
+            "duration_s": 0.8463758463758464,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 67.93525004386902,
+          "background": {
+            "height": 80.1331956506727,
+            "duration_s": 1.2718762718762717,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 61.544105146559055,
+            "duration_s": 1.0591260591260592,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 80.1949999332428,
+          "background": {
+            "height": 76.49127533910828,
+            "duration_s": 1.0822510822510822,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 58.73086528570883,
+            "duration_s": 1.0545010545010545,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 92.00312495231628,
+          "background": {
+            "height": 61.67875649379707,
+            "duration_s": 1.5725015725015725,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 47.2887784495681,
+            "duration_s": 1.0915010915010914,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 103.55787491798401,
+          "background": {
+            "height": 59.77337648144097,
+            "duration_s": 0.925000925000925,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 45.81694750812586,
+            "duration_s": 0.8926258926258926,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 111.19837498664856,
+          "background": {
+            "height": 74.88911633839362,
+            "duration_s": 0.7677507677507677,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 57.49326062151057,
+            "duration_s": 0.7492507492507492,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 121.02262496948242,
+          "background": {
+            "height": 84.39730980086014,
+            "duration_s": 1.2533762533762534,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 64.83796521824466,
+            "duration_s": 1.2025012025012025,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        }
+      ],
+      "summary": {
+        "background": {
+          "duration_s": {
+            "n": 13,
+            "min": 0.2913752913752914,
+            "median": 1.0822510822510822,
+            "max": 1.5725015725015725
+          },
+          "n_with_more_than_one_peak": 0,
+          "n_cut_by_search_limit": 0,
+          "cough_scale": {
+            "n": 11,
+            "duration_s": [
+              1.21,
+              1.13,
+              1.22,
+              0.9,
+              0.91,
+              1.27,
+              1.08,
+              1.57,
+              0.93,
+              0.77,
+              1.25
+            ],
+            "n_peaks": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "height": [
+              92.1,
+              64.8,
+              98.1,
+              50.8,
+              79.1,
+              80.1,
+              76.5,
+              61.7,
+              59.8,
+              74.9,
+              84.4
+            ]
+          }
+        },
+        "detector": {
+          "duration_s": {
+            "n": 13,
+            "min": 0.23125023125023125,
+            "median": 0.9573759573759574,
+            "max": 1.2025012025012025
+          },
+          "n_with_more_than_one_peak": 0,
+          "n_cut_by_search_limit": 0,
+          "cough_scale": {
+            "n": 7,
+            "duration_s": [
+              1.11,
+              1.2,
+              0.85,
+              1.06,
+              1.05,
+              0.75,
+              1.2
+            ],
+            "n_peaks": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "height": [
+              70.8,
+              75.4,
+              60.7,
+              61.5,
+              58.7,
+              57.5,
+              64.8
+            ]
+          }
+        }
+      }
+    },
+    "cough_metronomic_02": {
+      "is_cough_session": true,
+      "transients": [
+        {
+          "t_s": 10.20550012588501,
+          "background": {
+            "height": 123.74405114794983,
+            "duration_s": 1.2256262256262256,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 97.43089950480402,
+            "duration_s": 1.193251193251193,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 20.370375156402588,
+          "background": {
+            "height": 89.07665542319674,
+            "duration_s": 0.5688755688755689,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 70.05426104316625,
+            "duration_s": 0.5365005365005365,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 30.329750061035156,
+          "background": {
+            "height": 69.51311183148174,
+            "duration_s": 0.6798756798756799,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 54.60504575767955,
+            "duration_s": 0.6382506382506382,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 39.6247501373291,
+          "background": {
+            "height": 108.45315341009159,
+            "duration_s": 0.9018759018759018,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 85.35576751488293,
+            "duration_s": 0.888000888000888,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 49.8738751411438,
+          "background": {
+            "height": 87.55301323433494,
+            "duration_s": 0.9481259481259481,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 68.85104976994147,
+            "duration_s": 0.9342509342509342,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 59.99150013923645,
+          "background": {
+            "height": 92.62028789161232,
+            "duration_s": 0.8278758278758278,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 72.85264675690667,
+            "duration_s": 0.7908757908757909,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 68.98487496376038,
+          "background": {
+            "height": 79.04567119288072,
+            "duration_s": 1.503126503126503,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 62.13285180700399,
+            "duration_s": 1.4291264291264292,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 79.44675016403198,
+          "background": {
+            "height": 63.022437744735804,
+            "duration_s": 1.022126022126022,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 49.479398614871855,
+            "duration_s": 0.9897509897509897,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 88.76125001907349,
+          "background": {
+            "height": 81.60254894861286,
+            "duration_s": 1.4568764568764567,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 64.15200312904294,
+            "duration_s": 0.9527509527509527,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 96.41100001335144,
+          "background": {
+            "height": 13.10182353954054,
+            "duration_s": 0.21737521737521737,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 10.057383251234008,
+            "duration_s": 0.18962518962518962,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 97.80087518692017,
+          "background": {
+            "height": 91.31520991601457,
+            "duration_s": 1.022126022126022,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 71.82203435712161,
+            "duration_s": 0.9481259481259481,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 109.62900018692017,
+          "background": {
+            "height": 110.62509922593274,
+            "duration_s": 0.6891256891256891,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 87.07094034847695,
+            "duration_s": 0.6336256336256336,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 118.98925018310547,
+          "background": {
+            "height": 96.09596087721546,
+            "duration_s": 0.9943759943759943,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 75.59736526686379,
+            "duration_s": 0.9296259296259296,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        }
+      ],
+      "summary": {
+        "background": {
+          "duration_s": {
+            "n": 13,
+            "min": 0.21737521737521737,
+            "median": 0.9481259481259481,
+            "max": 1.503126503126503
+          },
+          "n_with_more_than_one_peak": 0,
+          "n_cut_by_search_limit": 0,
+          "cough_scale": {
+            "n": 12,
+            "duration_s": [
+              1.23,
+              0.57,
+              0.68,
+              0.9,
+              0.95,
+              0.83,
+              1.5,
+              1.02,
+              1.46,
+              1.02,
+              0.69,
+              0.99
+            ],
+            "n_peaks": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "height": [
+              123.7,
+              89.1,
+              69.5,
+              108.5,
+              87.6,
+              92.6,
+              79.0,
+              63.0,
+              81.6,
+              91.3,
+              110.6,
+              96.1
+            ]
+          }
+        },
+        "detector": {
+          "duration_s": {
+            "n": 13,
+            "min": 0.18962518962518962,
+            "median": 0.9296259296259296,
+            "max": 1.4291264291264292
+          },
+          "n_with_more_than_one_peak": 0,
+          "n_cut_by_search_limit": 0,
+          "cough_scale": {
+            "n": 11,
+            "duration_s": [
+              1.19,
+              0.54,
+              0.64,
+              0.89,
+              0.93,
+              0.79,
+              1.43,
+              0.95,
+              0.95,
+              0.63,
+              0.93
+            ],
+            "n_peaks": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "height": [
+              97.4,
+              70.1,
+              54.6,
+              85.4,
+              68.9,
+              72.9,
+              62.1,
+              64.2,
+              71.8,
+              87.1,
+              75.6
+            ]
+          }
+        }
+      }
+    },
+    "cough_natural_01_sitting": {
+      "is_cough_session": true,
+      "transients": [
+        {
+          "t_s": 3.411749839782715,
+          "background": {
+            "height": 119.15886449105022,
+            "duration_s": 2.0396270396270397,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 98.97132364734237,
+            "duration_s": 1.2533762533762534,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 12.87987494468689,
+          "background": {
+            "height": 126.97805492409817,
+            "duration_s": 1.0313760313760314,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 105.48481021159608,
+            "duration_s": 1.0175010175010175,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 24.112499952316284,
+          "background": {
+            "height": 86.80775600636784,
+            "duration_s": 0.9527509527509527,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 72.02243267736581,
+            "duration_s": 0.9342509342509342,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 49.99149990081787,
+          "background": {
+            "height": 89.53854392133032,
+            "duration_s": 1.355126355126355,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 74.2972142607325,
+            "duration_s": 1.3366263366263367,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 55.72212505340576,
+          "background": {
+            "height": 67.79181492914748,
+            "duration_s": 1.392126392126392,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 56.181908293969514,
+            "duration_s": 1.2302512302512303,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 78.40312504768372,
+          "background": {
+            "height": 85.6478799159353,
+            "duration_s": 1.0313760313760314,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 71.05624092184841,
+            "duration_s": 0.9805009805009804,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 92.37487483024597,
+          "background": {
+            "height": 91.4566733127854,
+            "duration_s": 0.7677507677507677,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 75.89504080386642,
+            "duration_s": 0.74000074000074,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 101.98175001144409,
+          "background": {
+            "height": 89.95355522264306,
+            "duration_s": 1.3227513227513228,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 74.64292403187314,
+            "duration_s": 1.2533762533762534,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 114.65512490272522,
+          "background": {
+            "height": 92.44803992036431,
+            "duration_s": 1.0406260406260406,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 76.72086198497276,
+            "duration_s": 1.0267510267510267,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        }
+      ],
+      "summary": {
+        "background": {
+          "duration_s": {
+            "n": 9,
+            "min": 0.7677507677507677,
+            "median": 1.0406260406260406,
+            "max": 2.0396270396270397
+          },
+          "n_with_more_than_one_peak": 0,
+          "n_cut_by_search_limit": 0,
+          "cough_scale": {
+            "n": 9,
+            "duration_s": [
+              2.04,
+              1.03,
+              0.95,
+              1.36,
+              1.39,
+              1.03,
+              0.77,
+              1.32,
+              1.04
+            ],
+            "n_peaks": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "height": [
+              119.2,
+              127.0,
+              86.8,
+              89.5,
+              67.8,
+              85.6,
+              91.5,
+              90.0,
+              92.4
+            ]
+          }
+        },
+        "detector": {
+          "duration_s": {
+            "n": 9,
+            "min": 0.74000074000074,
+            "median": 1.0267510267510267,
+            "max": 1.3366263366263367
+          },
+          "n_with_more_than_one_peak": 0,
+          "n_cut_by_search_limit": 0,
+          "cough_scale": {
+            "n": 9,
+            "duration_s": [
+              1.25,
+              1.02,
+              0.93,
+              1.34,
+              1.23,
+              0.98,
+              0.74,
+              1.25,
+              1.03
+            ],
+            "n_peaks": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "height": [
+              99.0,
+              105.5,
+              72.0,
+              74.3,
+              56.2,
+              71.1,
+              75.9,
+              74.6,
+              76.7
+            ]
+          }
+        }
+      }
+    },
+    "cough_natural_02_sitting": {
+      "is_cough_session": true,
+      "transients": [
+        {
+          "t_s": 3.4247500896453857,
+          "background": {
+            "height": 185.78745606229248,
+            "duration_s": 0.6845006845006845,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 152.21972475728168,
+            "duration_s": 0.6706256706256706,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 13.659250020980835,
+          "background": {
+            "height": 144.5574523098297,
+            "duration_s": 0.8787508787508788,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 118.37707462798593,
+            "duration_s": 0.851000851000851,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 31.460624933242798,
+          "background": {
+            "height": 101.43177666081525,
+            "duration_s": 1.739001739001739,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 82.97840812915236,
+            "duration_s": 1.2718762718762717,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 53.430999994277954,
+          "background": {
+            "height": 79.39529525433218,
+            "duration_s": 1.3273763273763273,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 64.89029601551252,
+            "duration_s": 1.073001073001073,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 73.52750015258789,
+          "background": {
+            "height": 95.75726114984379,
+            "duration_s": 1.4846264846264845,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 78.32061948949942,
+            "duration_s": 1.2903762903762903,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 98.75600004196167,
+          "background": {
+            "height": 79.32991808662534,
+            "duration_s": 1.3875013875013875,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 64.83663275061372,
+            "duration_s": 1.3412513412513412,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 105.63499999046326,
+          "background": {
+            "height": 131.34978963418536,
+            "duration_s": 1.5123765123765123,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 107.53588456549677,
+            "duration_s": 1.493876493876494,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 121.6322500705719,
+          "background": {
+            "height": 92.78753174006158,
+            "duration_s": 0.9435009435009435,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 75.88298902025805,
+            "duration_s": 0.9018759018759018,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        }
+      ],
+      "summary": {
+        "background": {
+          "duration_s": {
+            "n": 8,
+            "min": 0.6845006845006845,
+            "median": 1.3574388574388574,
+            "max": 1.739001739001739
+          },
+          "n_with_more_than_one_peak": 0,
+          "n_cut_by_search_limit": 0,
+          "cough_scale": {
+            "n": 8,
+            "duration_s": [
+              0.68,
+              0.88,
+              1.74,
+              1.33,
+              1.48,
+              1.39,
+              1.51,
+              0.94
+            ],
+            "n_peaks": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "height": [
+              185.8,
+              144.6,
+              101.4,
+              79.4,
+              95.8,
+              79.3,
+              131.3,
+              92.8
+            ]
+          }
+        },
+        "detector": {
+          "duration_s": {
+            "n": 8,
+            "min": 0.6706256706256706,
+            "median": 1.1724386724386724,
+            "max": 1.493876493876494
+          },
+          "n_with_more_than_one_peak": 0,
+          "n_cut_by_search_limit": 0,
+          "cough_scale": {
+            "n": 8,
+            "duration_s": [
+              0.67,
+              0.85,
+              1.27,
+              1.07,
+              1.29,
+              1.34,
+              1.49,
+              0.9
+            ],
+            "n_peaks": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "height": [
+              152.2,
+              118.4,
+              83.0,
+              64.9,
+              78.3,
+              64.8,
+              107.5,
+              75.9
+            ]
+          }
+        }
+      }
+    },
+    "baseline_calm_01_sitting": {
+      "is_cough_session": false,
+      "transients": [
+        {
+          "t_s": 2.1837499141693115,
+          "background": {
+            "height": 8.729861823301693,
+            "duration_s": 0.3376253376253376,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 8.266322533584134,
+            "duration_s": 0.2451252451252451,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 77.18537497520447,
+          "background": {
+            "height": 9.474571181902451,
+            "duration_s": 0.20812520812520813,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 8.9787918174531,
+            "duration_s": 0.20812520812520813,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 113.95937490463257,
+          "background": {
+            "height": 11.115696249505639,
+            "duration_s": 0.2775002775002775,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 10.548869040400277,
+            "duration_s": 0.2775002775002775,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        }
+      ],
+      "summary": {
+        "background": {
+          "duration_s": {
+            "n": 3,
+            "min": 0.20812520812520813,
+            "median": 0.2775002775002775,
+            "max": 0.3376253376253376
+          },
+          "n_with_more_than_one_peak": 0,
+          "n_cut_by_search_limit": 0,
+          "cough_scale": {
+            "n": 0,
+            "duration_s": [],
+            "n_peaks": [],
+            "height": []
+          }
+        },
+        "detector": {
+          "duration_s": {
+            "n": 3,
+            "min": 0.20812520812520813,
+            "median": 0.2451252451252451,
+            "max": 0.2775002775002775
+          },
+          "n_with_more_than_one_peak": 0,
+          "n_cut_by_search_limit": 0,
+          "cough_scale": {
+            "n": 0,
+            "duration_s": [],
+            "n_peaks": [],
+            "height": []
+          }
+        }
+      }
+    },
+    "baseline_confound_01_talking": {
+      "is_cough_session": false,
+      "transients": [
+        {
+          "t_s": 0.4608747959136963,
+          "background": {
+            "height": 24.2671255180483,
+            "duration_s": 0.26825026825026826,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 15.257813568441923,
+            "duration_s": 0.2451252451252451,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 5.1227498054504395,
+          "background": {
+            "height": 21.032738928625978,
+            "duration_s": 1.4476264476264475,
+            "n_peaks": 2,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 13.164855424372448,
+            "duration_s": 1.3967513967513967,
+            "n_peaks": 2,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 6.16837477684021,
+          "background": {
+            "height": 42.70866933608187,
+            "duration_s": 1.4476264476264475,
+            "n_peaks": 2,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 27.191260067816987,
+            "duration_s": 1.3967513967513967,
+            "n_peaks": 2,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 7.66949987411499,
+          "background": {
+            "height": 48.28335756363308,
+            "duration_s": 1.1007511007511006,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 30.798617693111076,
+            "duration_s": 0.8186258186258186,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 13.62387490272522,
+          "background": {
+            "height": 14.443474534395655,
+            "duration_s": 0.26825026825026826,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 8.900969770618692,
+            "duration_s": 0.18962518962518962,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 16.904124975204468,
+          "background": {
+            "height": 39.10423181219203,
+            "duration_s": 1.0637510637510637,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 24.858843499220516,
+            "duration_s": 0.8093758093758093,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 22.7282497882843,
+          "background": {
+            "height": 117.55686294128844,
+            "duration_s": 1.9147519147519148,
+            "n_peaks": 2,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 75.62521563986418,
+            "duration_s": 1.688126688126688,
+            "n_peaks": 2,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 23.890999794006348,
+          "background": {
+            "height": 18.122512676459717,
+            "duration_s": 1.9147519147519148,
+            "n_peaks": 2,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 11.281660089752895,
+            "duration_s": 1.688126688126688,
+            "n_peaks": 2,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 31.024874925613403,
+          "background": {
+            "height": 69.55106495124535,
+            "duration_s": 1.2025012025012025,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 44.56086291393974,
+            "duration_s": 1.0822510822510822,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 35.79412484169006,
+          "background": {
+            "height": 54.9256439443001,
+            "duration_s": 2.34025234025234,
+            "n_peaks": 2,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 35.09681365432478,
+            "duration_s": 1.8962518962518962,
+            "n_peaks": 2,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 36.9137499332428,
+          "background": {
+            "height": 116.81081580847197,
+            "duration_s": 2.34025234025234,
+            "n_peaks": 2,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 75.14245163521662,
+            "duration_s": 1.8962518962518962,
+            "n_peaks": 2,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 44.15549993515015,
+          "background": {
+            "height": 102.27347296041583,
+            "duration_s": 2.344877344877345,
+            "n_peaks": 2,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 65.73539738682403,
+            "duration_s": 2.3032523032523033,
+            "n_peaks": 2,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 45.53974986076355,
+          "background": {
+            "height": 66.75469493478575,
+            "duration_s": 2.344877344877345,
+            "n_peaks": 2,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 42.75134347711009,
+            "duration_s": 2.3032523032523033,
+            "n_peaks": 2,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 56.43012499809265,
+          "background": {
+            "height": 14.656225722581944,
+            "duration_s": 0.2405002405002405,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 9.03864018188962,
+            "duration_s": 0.21737521737521737,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 57.44799995422363,
+          "background": {
+            "height": 212.6576447117181,
+            "duration_s": 1.4013764013764014,
+            "n_peaks": 2,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 137.16453699518323,
+            "duration_s": 0.42087542087542085,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 58.46624994277954,
+          "background": {
+            "height": 15.605093017694616,
+            "duration_s": 1.4013764013764014,
+            "n_peaks": 2,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 9.65264827215379,
+            "duration_s": 0.4532504532504532,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 74.39937496185303,
+          "background": {
+            "height": 113.62172797396661,
+            "duration_s": 1.1516261516261517,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 73.07880612753071,
+            "duration_s": 1.0313760313760314,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 84.40599989891052,
+          "background": {
+            "height": 34.69637393961488,
+            "duration_s": 1.0452510452510453,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 22.006536956000886,
+            "duration_s": 0.7122507122507122,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 97.66612482070923,
+          "background": {
+            "height": 40.94131740540289,
+            "duration_s": 1.308876308876309,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 26.047613965384894,
+            "duration_s": 1.0406260406260406,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 102.73237490653992,
+          "background": {
+            "height": 25.255512989005684,
+            "duration_s": 1.2163762163762164,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 15.897395000544622,
+            "duration_s": 0.4301254301254301,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 112.96662497520447,
+          "background": {
+            "height": 23.299059897232816,
+            "duration_s": 1.2441262441262442,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 14.63138232126027,
+            "duration_s": 0.49487549487549487,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 124.24287486076355,
+          "background": {
+            "height": 47.319196267507195,
+            "duration_s": 1.2395012395012395,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 30.174712918238853,
+            "duration_s": 0.504125504125504,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        }
+      ],
+      "summary": {
+        "background": {
+          "duration_s": {
+            "n": 22,
+            "min": 0.2405002405002405,
+            "median": 1.2765012765012766,
+            "max": 2.344877344877345
+          },
+          "n_with_more_than_one_peak": 10,
+          "n_cut_by_search_limit": 0,
+          "cough_scale": {
+            "n": 8,
+            "duration_s": [
+              1.91,
+              1.2,
+              2.34,
+              2.34,
+              2.34,
+              2.34,
+              1.4,
+              1.15
+            ],
+            "n_peaks": [
+              2,
+              1,
+              2,
+              2,
+              2,
+              2,
+              2,
+              1
+            ],
+            "height": [
+              117.6,
+              69.6,
+              54.9,
+              116.8,
+              102.3,
+              66.8,
+              212.7,
+              113.6
+            ]
+          }
+        },
+        "detector": {
+          "duration_s": {
+            "n": 22,
+            "min": 0.18962518962518962,
+            "median": 0.925000925000925,
+            "max": 2.3032523032523033
+          },
+          "n_with_more_than_one_peak": 8,
+          "n_cut_by_search_limit": 0,
+          "cough_scale": {
+            "n": 5,
+            "duration_s": [
+              1.69,
+              1.9,
+              2.3,
+              0.42,
+              1.03
+            ],
+            "n_peaks": [
+              2,
+              2,
+              2,
+              1,
+              1
+            ],
+            "height": [
+              75.6,
+              75.1,
+              65.7,
+              137.2,
+              73.1
+            ]
+          }
+        }
+      }
+    },
+    "baseline_confound_02_throatclear": {
+      "is_cough_session": false,
+      "transients": [
+        {
+          "t_s": 6.8420000076293945,
+          "background": {
+            "height": 42.44734322940736,
+            "duration_s": 0.9805009805009804,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 37.99976517802624,
+            "duration_s": 0.9527509527509527,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 10.672000169754028,
+          "background": {
+            "height": 48.381943748457445,
+            "duration_s": 0.7631257631257631,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 43.32866541834094,
+            "duration_s": 0.7538757538757539,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 22.356500148773193,
+          "background": {
+            "height": 24.294823360786463,
+            "duration_s": 0.6845006845006845,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 21.699937214931143,
+            "duration_s": 0.6567506567506567,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 35.15225005149841,
+          "background": {
+            "height": 19.247409140657748,
+            "duration_s": 0.9018759018759018,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 17.1676748049725,
+            "duration_s": 0.8695008695008695,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 38.340625047683716,
+          "background": {
+            "height": 32.44319178032044,
+            "duration_s": 1.1747511747511747,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 29.016662627137585,
+            "duration_s": 1.1655011655011656,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 46.595625162124634,
+          "background": {
+            "height": 32.805941633304705,
+            "duration_s": 0.7446257446257446,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 29.342389316328685,
+            "duration_s": 0.74000074000074,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 57.70800018310547,
+          "background": {
+            "height": 36.46740667783774,
+            "duration_s": 0.5781255781255781,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 32.63015601487625,
+            "duration_s": 0.5688755688755689,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 73.99399995803833,
+          "background": {
+            "height": 15.910187102897968,
+            "duration_s": 0.3885003885003885,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 14.171058055131327,
+            "duration_s": 0.38387538387538384,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 82.24900007247925,
+          "background": {
+            "height": 9.422877044530724,
+            "duration_s": 0.19887519887519886,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 8.345859203404299,
+            "duration_s": 0.19425019425019424,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 88.87262511253357,
+          "background": {
+            "height": 19.10812240292795,
+            "duration_s": 0.6336256336256336,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 17.042604022570487,
+            "duration_s": 0.6058756058756058,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 98.3767499923706,
+          "background": {
+            "height": 18.810680569485772,
+            "duration_s": 0.5180005180005179,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 16.77551985193058,
+            "duration_s": 0.504125504125504,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        },
+        {
+          "t_s": 115.01725006103516,
+          "background": {
+            "height": 37.895175462088154,
+            "duration_s": 0.5827505827505828,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          },
+          "detector": {
+            "height": 33.912203120335626,
+            "duration_s": 0.555000555000555,
+            "n_peaks": 1,
+            "cut_by_search_limit": false
+          }
+        }
+      ],
+      "summary": {
+        "background": {
+          "duration_s": {
+            "n": 12,
+            "min": 0.19887519887519886,
+            "median": 0.659063159063159,
+            "max": 1.1747511747511747
+          },
+          "n_with_more_than_one_peak": 0,
+          "n_cut_by_search_limit": 0,
+          "cough_scale": {
+            "n": 0,
+            "duration_s": [],
+            "n_peaks": [],
+            "height": []
+          }
+        },
+        "detector": {
+          "duration_s": {
+            "n": 12,
+            "min": 0.19425019425019424,
+            "median": 0.6313131313131313,
+            "max": 1.1655011655011656
+          },
+          "n_with_more_than_one_peak": 0,
+          "n_cut_by_search_limit": 0,
+          "cough_scale": {
+            "n": 0,
+            "duration_s": [],
+            "n_peaks": [],
+            "height": []
+          }
+        }
+      }
+    }
+  },
+  "groups": {
+    "natural_cough_sitting": {
+      "background": {
+        "duration_s": {
+          "n": 17,
+          "min": 0.6845006845006845,
+          "median": 1.3227513227513228,
+          "max": 2.0396270396270397
+        },
+        "n_with_more_than_one_peak": 0,
+        "n_cut_by_search_limit": 0,
+        "cough_scale": {
+          "n": 17,
+          "duration_s": [
+            2.04,
+            1.03,
+            0.95,
+            1.36,
+            1.39,
+            1.03,
+            0.77,
+            1.32,
+            1.04,
+            0.68,
+            0.88,
+            1.74,
+            1.33,
+            1.48,
+            1.39,
+            1.51,
+            0.94
+          ],
+          "n_peaks": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "height": [
+            119.2,
+            127.0,
+            86.8,
+            89.5,
+            67.8,
+            85.6,
+            91.5,
+            90.0,
+            92.4,
+            185.8,
+            144.6,
+            101.4,
+            79.4,
+            95.8,
+            79.3,
+            131.3,
+            92.8
+          ]
+        }
+      },
+      "detector": {
+        "duration_s": {
+          "n": 17,
+          "min": 0.6706256706256706,
+          "median": 1.073001073001073,
+          "max": 1.493876493876494
+        },
+        "n_with_more_than_one_peak": 0,
+        "n_cut_by_search_limit": 0,
+        "cough_scale": {
+          "n": 17,
+          "duration_s": [
+            1.25,
+            1.02,
+            0.93,
+            1.34,
+            1.23,
+            0.98,
+            0.74,
+            1.25,
+            1.03,
+            0.67,
+            0.85,
+            1.27,
+            1.07,
+            1.29,
+            1.34,
+            1.49,
+            0.9
+          ],
+          "n_peaks": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "height": [
+            99.0,
+            105.5,
+            72.0,
+            74.3,
+            56.2,
+            71.1,
+            75.9,
+            74.6,
+            76.7,
+            152.2,
+            118.4,
+            83.0,
+            64.9,
+            78.3,
+            64.8,
+            107.5,
+            75.9
+          ]
+        }
+      }
+    },
+    "all_seated_cough": {
+      "background": {
+        "duration_s": {
+          "n": 43,
+          "min": 0.21737521737521737,
+          "median": 1.0313760313760314,
+          "max": 2.0396270396270397
+        },
+        "n_with_more_than_one_peak": 0,
+        "n_cut_by_search_limit": 0,
+        "cough_scale": {
+          "n": 40,
+          "duration_s": [
+            1.21,
+            1.13,
+            1.22,
+            0.9,
+            0.91,
+            1.27,
+            1.08,
+            1.57,
+            0.93,
+            0.77,
+            1.25,
+            1.23,
+            0.57,
+            0.68,
+            0.9,
+            0.95,
+            0.83,
+            1.5,
+            1.02,
+            1.46,
+            1.02,
+            0.69,
+            0.99,
+            2.04,
+            1.03,
+            0.95,
+            1.36,
+            1.39,
+            1.03,
+            0.77,
+            1.32,
+            1.04,
+            0.68,
+            0.88,
+            1.74,
+            1.33,
+            1.48,
+            1.39,
+            1.51,
+            0.94
+          ],
+          "n_peaks": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "height": [
+            92.1,
+            64.8,
+            98.1,
+            50.8,
+            79.1,
+            80.1,
+            76.5,
+            61.7,
+            59.8,
+            74.9,
+            84.4,
+            123.7,
+            89.1,
+            69.5,
+            108.5,
+            87.6,
+            92.6,
+            79.0,
+            63.0,
+            81.6,
+            91.3,
+            110.6,
+            96.1,
+            119.2,
+            127.0,
+            86.8,
+            89.5,
+            67.8,
+            85.6,
+            91.5,
+            90.0,
+            92.4,
+            185.8,
+            144.6,
+            101.4,
+            79.4,
+            95.8,
+            79.3,
+            131.3,
+            92.8
+          ]
+        }
+      },
+      "detector": {
+        "duration_s": {
+          "n": 43,
+          "min": 0.18962518962518962,
+          "median": 0.9573759573759574,
+          "max": 1.493876493876494
+        },
+        "n_with_more_than_one_peak": 0,
+        "n_cut_by_search_limit": 0,
+        "cough_scale": {
+          "n": 35,
+          "duration_s": [
+            1.11,
+            1.2,
+            0.85,
+            1.06,
+            1.05,
+            0.75,
+            1.2,
+            1.19,
+            0.54,
+            0.64,
+            0.89,
+            0.93,
+            0.79,
+            1.43,
+            0.95,
+            0.95,
+            0.63,
+            0.93,
+            1.25,
+            1.02,
+            0.93,
+            1.34,
+            1.23,
+            0.98,
+            0.74,
+            1.25,
+            1.03,
+            0.67,
+            0.85,
+            1.27,
+            1.07,
+            1.29,
+            1.34,
+            1.49,
+            0.9
+          ],
+          "n_peaks": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "height": [
+            70.8,
+            75.4,
+            60.7,
+            61.5,
+            58.7,
+            57.5,
+            64.8,
+            97.4,
+            70.1,
+            54.6,
+            85.4,
+            68.9,
+            72.9,
+            62.1,
+            64.2,
+            71.8,
+            87.1,
+            75.6,
+            99.0,
+            105.5,
+            72.0,
+            74.3,
+            56.2,
+            71.1,
+            75.9,
+            74.6,
+            76.7,
+            152.2,
+            118.4,
+            83.0,
+            64.9,
+            78.3,
+            64.8,
+            107.5,
+            75.9
+          ]
+        }
+      }
+    },
+    "talking": {
+      "background": {
+        "duration_s": {
+          "n": 22,
+          "min": 0.2405002405002405,
+          "median": 1.2765012765012766,
+          "max": 2.344877344877345
+        },
+        "n_with_more_than_one_peak": 10,
+        "n_cut_by_search_limit": 0,
+        "cough_scale": {
+          "n": 8,
+          "duration_s": [
+            1.91,
+            1.2,
+            2.34,
+            2.34,
+            2.34,
+            2.34,
+            1.4,
+            1.15
+          ],
+          "n_peaks": [
+            2,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            1
+          ],
+          "height": [
+            117.6,
+            69.6,
+            54.9,
+            116.8,
+            102.3,
+            66.8,
+            212.7,
+            113.6
+          ]
+        }
+      },
+      "detector": {
+        "duration_s": {
+          "n": 22,
+          "min": 0.18962518962518962,
+          "median": 0.925000925000925,
+          "max": 2.3032523032523033
+        },
+        "n_with_more_than_one_peak": 8,
+        "n_cut_by_search_limit": 0,
+        "cough_scale": {
+          "n": 5,
+          "duration_s": [
+            1.69,
+            1.9,
+            2.3,
+            0.42,
+            1.03
+          ],
+          "n_peaks": [
+            2,
+            2,
+            2,
+            1,
+            1
+          ],
+          "height": [
+            75.6,
+            75.1,
+            65.7,
+            137.2,
+            73.1
+          ]
+        }
+      }
+    },
+    "throat_clearing": {
+      "background": {
+        "duration_s": {
+          "n": 12,
+          "min": 0.19887519887519886,
+          "median": 0.659063159063159,
+          "max": 1.1747511747511747
+        },
+        "n_with_more_than_one_peak": 0,
+        "n_cut_by_search_limit": 0,
+        "cough_scale": {
+          "n": 0,
+          "duration_s": [],
+          "n_peaks": [],
+          "height": []
+        }
+      },
+      "detector": {
+        "duration_s": {
+          "n": 12,
+          "min": 0.19425019425019424,
+          "median": 0.6313131313131313,
+          "max": 1.1655011655011656
+        },
+        "n_with_more_than_one_peak": 0,
+        "n_cut_by_search_limit": 0,
+        "cough_scale": {
+          "n": 0,
+          "duration_s": [],
+          "n_peaks": [],
+          "height": []
+        }
+      }
+    }
+  }
+}
