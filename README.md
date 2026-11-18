@@ -7,6 +7,20 @@ or a bedroom at night, a microphone records other people and is often not
 acceptable. A chest-worn accelerometer and gyroscope record body movement only,
 so they can go where a microphone cannot.
 
+**What I did**
+
+- Recorded 12 sessions on myself with a Movesense chest sensor, streamed over
+  Bluetooth with my own
+  [dashboard](https://github.com/sumeyye-agac/movesense-ecg-hrv-dashboard).
+- Built a two-stage pipeline: transient detection on the accelerometer, then a
+  random-forest classifier that labels each transient as cough or not.
+- Audited my own first labelling pass (8 checks), found that its labels came
+  from the same signal it classified, and rebuilt the analysis.
+- Tested the method on an external dataset (EPFL, 15 subjects) with coughs
+  annotated from audio.
+
+**Built with:** Python, NumPy, SciPy, pandas, scikit-learn.
+
 **Activities, my recordings:** coughing (paced and natural), quiet sitting,
 quiet standing, talking (with some laughing), throat clearing, walking, arm
 movement.
@@ -28,7 +42,7 @@ Detection uses the accelerometer only. The features use both the
 accelerometer and the gyroscope. The band is 10-80 Hz on my recordings and
 10-45 Hz on EPFL, whose IMU runs at 100 Hz.
 
-## What was found
+## What I found
 
 In one line: cough-like movements are detected when coughs are sparse, but
 they are not reliably told apart from laughing.
@@ -47,13 +61,8 @@ they are not reliably told apart from laughing.
   keep matching over a wide range of thresholds.
 - Talking and laughing is the problem: 64% of the transients in that session
   are classified as coughs, against 33% for throat clearing and 0% for quiet
-  sitting. In that session several large transients sit in double-peaked
-  bursts up to 2.3 s long, while every seated cough is a single burst (five
-  events, one session, one subject). I tested this on EPFL with a wider
-  feature window: cough vs. laugh rises by about 0.06 AUC, but by the same
-  amount without the burst-shape features, and every other confound rises too.
-  On my own recordings the wider window moves the talking session the wrong
-  way, from 64% to 86% called cough.
+  sitting. A wider feature window with burst-shape features did not fix it;
+  see "Burst shape" below.
 
 **On the EPFL dataset**
 
