@@ -8,7 +8,8 @@ acceptable. A chest-worn accelerometer and gyroscope record body movement only,
 so they can go where a microphone cannot.
 
 **Activities, my recordings:** coughing (paced and natural), quiet sitting,
-quiet standing, talking, throat clearing, walking, arm movement.
+quiet standing, talking (with some laughing), throat clearing, walking, arm
+movement.
 
 **Activities, EPFL dataset:** coughing, laughing, throat clearing, deep
 breathing, each while sitting and while walking.
@@ -318,7 +319,7 @@ recorded. The published recordings carry no device identifier.
 | `cough_natural_04_walking` | natural coughing, walking |
 | `baseline_calm_01_sitting` | quiet sitting |
 | `baseline_calm_02_standing` | quiet standing |
-| `baseline_confound_01_talking` | talking and laughing, seated |
+| `baseline_confound_01_talking` | talking, with some laughing in between, seated |
 | `baseline_confound_02_throatclear` | throat clearing, seated |
 | `baseline_movement_01_walking` | walking |
 | `baseline_movement_02_reaching` | arm movement |
